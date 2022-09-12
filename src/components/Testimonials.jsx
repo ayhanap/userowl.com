@@ -123,6 +123,7 @@ export function Testimonials() {
                         </div>
                         <div className="overflow-hidden rounded-full bg-slate-50">
                           <Image
+                            unoptimized
                             className="h-14 w-14 object-cover"
                             src={testimonial.author.image}
                             alt=""
