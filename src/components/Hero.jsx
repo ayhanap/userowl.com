@@ -28,7 +28,7 @@ const formPost = async (e) => {
 }
 export function Hero() {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <section id="hero" className="relative bg-white overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
         <svg
           className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
@@ -91,13 +91,13 @@ export function Hero() {
                     Notify me
                   </button>
                 </form>
-                <p className="mt-3 text-sm text-gray-500">
+                {/* <p className="mt-3 text-sm text-gray-500">
                   We care about the protection of your data. Read our&nbsp;
                   <a href="#" className="font-medium text-gray-900 underline">
                     Privacy Policy
                   </a>
                   .
-                </p>
+                </p> */}
               </div>
               <div id="owl-newsletter-form-thank-you" className="hidden mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 ">
                 <p className="text-2xl font-medium text-gray-900">Thank You!</p>
@@ -114,6 +114,6 @@ export function Hero() {
           </div>
         </main>
       </div >
-    </div >
+    </section >
   )
 }

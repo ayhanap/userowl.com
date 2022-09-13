@@ -9,6 +9,7 @@ import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
+import { FeaturesGrid } from '@/components/FeaturesGrid'
 
 export default function Home() {
   return (
@@ -17,18 +18,15 @@ export default function Home() {
         <title>Userowl - Hear your users</title>
         <meta
           name="description"
-          content="Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited."
+          content="Bug reporting and user feedback directly from your customers or internal team with all the tooling you need."
         />
       </Head>
       <Header />
       <main>
         <Hero />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
+        <FeaturesGrid />
         <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
+        {/* <Faqs /> */}
       </main>
       <Footer />
     </>
