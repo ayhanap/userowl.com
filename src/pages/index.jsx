@@ -20,6 +20,23 @@ export default function Home() {
           name="description"
           content="Bug reporting and user feedback directly from your customers or internal team with all the tooling you need."
         />
+
+        {/* <!-- Twitter Card data --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@getuserowl" />
+        <meta name="twitter:title" content="Userowl - Hear your users" />
+        <meta name="twitter:description" content="Bug reporting and user feedback directly from your customers or internal team with all the tooling you need." />
+        {/* <!-- Twitter summary card with large image must be at least 280x150px --> */}
+        <meta name="twitter:image:src" content="https://userowl.com/userowl-twitter-card.png" />
+
+
+        {/* <!-- Open Graph data --> */}
+        <meta property="og:title" content="Userowl - Hear your users" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://userowl.com/" />
+        <meta property="og:image" content="https://userowl.com/userowl-twitter-card.png" />
+        <meta property="og:description" content="Bug reporting and user feedback directly from your customers or internal team with all the tooling you need." />
+        <meta property="og:site_name" content="Userowl" />
       </Head>
       <Header />
       <main>
