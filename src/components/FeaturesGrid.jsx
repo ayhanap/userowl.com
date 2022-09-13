@@ -18,7 +18,7 @@ const features = [
   },
   {
     name: 'Feature Request',
-    description: 'Get new feature ideas easily on any of your pages.',
+    description: 'Get new feature ideas from your customers easily on any of your pages.',
     icon: LightBulbIcon,
   },
   {

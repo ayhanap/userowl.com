@@ -5,11 +5,11 @@ const nextConfig = {
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
-    images: {
-      unoptimized: true,
-    },
   },
-  images: { loader: "custom" },
+  images: {
+    loader: "custom",
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig

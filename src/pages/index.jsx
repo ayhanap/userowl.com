@@ -26,7 +26,7 @@ export default function Home() {
         <Hero />
         <FeaturesGrid />
         <CallToAction />
-        {/* <Faqs /> */}
+        <Faqs />
       </main>
       <Footer />
     </>

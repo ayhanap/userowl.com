@@ -6,53 +6,54 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
+      question: 'What exactly is Userowl?',
       answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+        'It’s a widget that you can place on your website or web application. Your users or internal UAT team can use this widget to give feedback on your product.',
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
+      question: 'How long does it take to add the widget script to my application?',
+      answer:
+        'It usually takes only 5-10 minutes to set up and you are ready to go. We have guides on common frameworks and CMS systems.',
     },
     {
-      question: 'How do I apply for a job at TaxPal?',
+      question: 'Can I customize how the widget looks on our site so that it fits our brand guidelines?',
       answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+        'Yes, you can customize the fields and style of the widget easily in a WYSIWYG editor.',
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
+      question: 'How do I see the collected feedback and bugs?',
       answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+        'You see bugs, feature requests, or general feeedback on Userowl application. You can organize the way you manage feedback with many of the available views like inbox view, kanban view, list view, etc.',
     },
     {
       question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
+        'Do I receive notifications when users report a new bug or feature?',
       answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
+        'Yes, you can configure to set who receives email notifications on your team.',
     },
     {
       question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
+        'Can I have multiple users that are in my organization?',
       answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+        'Yes, you can invite your team members and assign roles to them. With the help of the product, QA, and development teams on board you can assign issues and track reported feedback.',
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
+      question: 'How do I access Userowl application?',
       answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+        'Userowl is a SaaS solution, so you and your team can access it on your browser of choice. It is responsive so you can do urgent tasks with your smartphone on the go.',
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
+      question: 'What is the pricing model on Userowl?',
+      answer: 'Userowl is a subscription-based service. You can select the appropriate tier for your use and subscribe to a monthly or yearly plan. We also offer free trials.',
     },
     {
-      question: 'I lost my password, how do I get into my account?',
+      question: 'How is my data managed?',
       answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+        'At Userowl we prioritize data safety and ownership from the start. We comply with GDPR, CCPA, and KVKK. You can customize which personal information to take and you can export your data anytime because you own your data. You can also comply with your users’ requests to manage their data.',
     },
   ],
 ]
@@ -82,7 +83,7 @@ export function Faqs() {
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
             If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            and we will get back to you.
           </p>
         </div>
         <ul
