@@ -57,7 +57,7 @@ export function Hero() {
       <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
 
         <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
-          <div className="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div className="lg:grid lg:grid-cols-12 lg:gap-8 pb-20">
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
               <h1>
                 <span className="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
@@ -104,13 +104,14 @@ export function Hero() {
                 <p className="text-base font-normal text-gray-500">We will notify when Userowl is ready. Please check your email to confirm your subscription.</p>
               </div>
             </div>
-            <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-              <img
-                className="absolute inset-0 w-full h-full object-cover"
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
-                alt=""
-              />
-            </div>
+
+          </div>
+          <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
+            <img
+              className="absolute inset-0 w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+              alt=""
+            />
           </div>
         </main>
       </div >
