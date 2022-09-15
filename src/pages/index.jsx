@@ -10,6 +10,7 @@ import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
 import { FeaturesGrid } from '@/components/FeaturesGrid'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -40,6 +41,21 @@ export default function Home() {
       </Head>
       <Header />
       <main>
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-K2NY36GBM8"
+          dangerouslySetInnerHTML={{
+            __html: `
+            <!-- Google tag (gtag.js) -->
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-K2NY36GBM8');
+          `,
+          }}
+        />
         <Hero />
         <FeaturesGrid />
         <CallToAction />
