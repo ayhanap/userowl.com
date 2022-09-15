@@ -42,9 +42,12 @@ export default function Home() {
       <Header />
       <main>
         <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-K2NY36GBM8`}
+        />
+        <Script
           id="google-analytics"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-K2NY36GBM8"
           dangerouslySetInnerHTML={{
             __html: `
             <!-- Google tag (gtag.js) -->
