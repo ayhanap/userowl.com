@@ -8,7 +8,7 @@ import { GTM_ID, pageview } from '../lib/gtm'
 
 import { getCookie } from 'cookies-next';
 
-import { Layout } from '../components/layout';
+import { Layout } from '../components/Layout';
 
 export default function App({ Component, pageProps }) {
   const consent = getCookie('uowl_consent');
