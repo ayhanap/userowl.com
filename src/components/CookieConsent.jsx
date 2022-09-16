@@ -9,11 +9,11 @@ import { setCookie, hasCookie } from 'cookies-next';
 export function CookieConsent() {
     const [consent, setConsent] = useState(true);
     useEffect(() => {
-        setConsent(hasCookie('localConsent'));
+        setConsent(hasCookie('uowl_consent'));
     }, []);
     const acceptCookie = () => {
         setConsent(true);
-        setCookie('localConsent', 'true', { maxAge: 60 * 60 * 24 * 365 });
+        setCookie('uowl_consent', 'true', { maxAge: 60 * 60 * 24 * 365 });
         gtag('consent', 'update', {
             ad_storage: 'granted',
             analytics_storage: 'granted',
@@ -26,7 +26,7 @@ export function CookieConsent() {
     };
     const denyCookie = () => {
         setConsent(true);
-        setCookie('localConsent', 'false', { maxAge: 60 * 60 * 24 * 365 });
+        setCookie('uowl_consent', 'false', { maxAge: 60 * 60 * 24 * 365 });
         console.log('denying cookie');
     };
     if (consent === true) {
@@ -47,8 +47,8 @@ export function CookieConsent() {
                                     <LockClosedIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                 </span>
                                 <p className="ml-3 font-normal text-sm text-white">
-                                    <span className="md:hidden">We use cookies. Select "Accept All" to allow them to be used. Read our Cookie Policy.</span>
-                                    <span className="hidden md:inline">We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select "Accept All" to allow them to be used. Read our Cookie Policy.</span>
+                                    <span className="md:hidden">We use cookies. Select &quot;Accept All&quot; to allow them to be used. Read our Cookie Policy.</span>
+                                    <span className="hidden md:inline">We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select &quot;Accept All&quot; to allow them to be used. Read our Cookie Policy.</span>
                                 </p>
                             </div>
                             <div className="order-3 mt-2  w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
