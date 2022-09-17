@@ -27,6 +27,10 @@ export function CookieConsent() {
     const denyCookie = () => {
         setConsent(true);
         setCookie('uowl_consent', 'false', { maxAge: 60 * 60 * 24 * 365 });
+        gtag('consent', 'update', {
+            ad_storage: 'denied',
+            analytics_storage: 'denied',
+        });
         console.log('denying cookie');
     };
     if (consent === true) {

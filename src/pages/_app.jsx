@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
           // Default consent to 'denied'.
           gtag('consent', 'default', {
             'ad_storage': 'denied',
-            'analytics_storage': 'denied'
+            'analytics_storage': 'granted'
           });
 
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
