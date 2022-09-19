@@ -73,7 +73,7 @@ export function Faqs() {
         height={946}
         unoptimized
       />
-      <Container className="relative">
+      <Container className="relative" itemScope itemType="https://schema.org/FAQPage">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="faq-title"
@@ -94,11 +94,13 @@ export function Faqs() {
             <li key={columnIndex}>
               <ul role="list" className="flex flex-col gap-y-8">
                 {column.map((faq, faqIndex) => (
-                  <li key={faqIndex}>
-                    <h3 className="font-display text-lg leading-7 text-slate-900">
+                  <li key={faqIndex} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                    <h3 className="font-display text-lg leading-7 text-slate-900" itemProp="name">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <p className="mt-4 text-sm text-slate-700" itemProp="text">{faq.answer}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
