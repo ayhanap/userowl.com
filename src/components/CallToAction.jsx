@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="bg-indigo-700"
+      className="bg-purple-700"
     >
 
       <Container className="relative">
@@ -17,10 +17,10 @@ export function CallToAction() {
             <span className="block">Know when it&apos;s ready.</span>
             <span className="block">Get special early access discount.</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-indigo-200">
+          <p className="mt-4 text-lg leading-6 text-purple-200">
             Join our newsletter to get product updates about when Userowl will be ready and receive special early access promotions.
           </p>
-          <Button href="#hero" color="white" className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50 sm:w-auto">
+          <Button href="#hero" color="white" className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-purple-600 hover:bg-purple-50 sm:w-auto">
             Join early-access list
           </Button>
         </div>

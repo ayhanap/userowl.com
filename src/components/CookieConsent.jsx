@@ -43,11 +43,11 @@ export function CookieConsent() {
         your content from being obscured when the user scrolls to the bottom of the page.
       */}
             <div className="fixed inset-x-0 bottom-0">
-                <div className="bg-indigo-600">
+                <div className="bg-purple-600">
                     <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
                         <div className="flex flex-wrap items-center justify-between">
                             <div className="flex w-0 flex-1 items-center mr-16">
-                                <span className="flex rounded-lg bg-indigo-800 p-2">
+                                <span className="flex rounded-lg bg-purple-800 p-2">
                                     <LockClosedIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                 </span>
                                 <p className="ml-3 font-normal text-sm text-white">
@@ -59,7 +59,7 @@ export function CookieConsent() {
                                 <div className="flex justify-end">
                                     <button
                                         onClick={(e) => denyCookie()}
-                                        className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50"
+                                        className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-purple-600 shadow-sm hover:bg-purple-50"
                                     >
                                         Deny All
                                     </button>
@@ -67,7 +67,7 @@ export function CookieConsent() {
                                         onClick={() => {
                                             acceptCookie();
                                         }}
-                                        className="flex items-center justify-center ml-3 rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50"
+                                        className="flex items-center justify-center ml-3 rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-purple-600 shadow-sm hover:bg-purple-50"
                                     >
                                         Accept All
                                     </button>
@@ -79,7 +79,7 @@ export function CookieConsent() {
                                     onClick={(e) => {
                                         closeP();
                                     }}
-                                    className="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+                                    className="-mr-1 flex rounded-md p-2 hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
                                 >
 
                                     <span className="sr-only">Dismiss</span>

@@ -52,7 +52,7 @@ export function FeaturesGrid() {
   return (
     <section id="features" className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-lg font-semibold text-indigo-600">Hear your users</h2>
+        <h2 className="text-lg font-semibold text-purple-600">Hear your users</h2>
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Everything you need to gather feedback
         </p>
@@ -66,7 +66,7 @@ export function FeaturesGrid() {
                 <div className="flow-root rounded-lg bg-gray-50 px-6 pb-8">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg">
+                      <span className="inline-flex items-center justify-center rounded-md bg-purple-500 p-3 shadow-lg">
                         <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
