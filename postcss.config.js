@@ -1,15 +1,17 @@
 module.exports = {
   plugins: {
-    tailwindcss: {},
-    'postcss-focus-visible': {
-      replaceWith: '[data-focus-visible-added]',
-    },
     'postcss-lab-function': {
-      preserve: true,
+      preserve: false,
       subFeatures: {
         displayP3: false
       }
     },
+    tailwindcss: {},
+    'postcss-focus-visible': {
+      replaceWith: '[data-focus-visible-added]',
+    },
+
     autoprefixer: {},
+
   },
 }
