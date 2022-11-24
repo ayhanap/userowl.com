@@ -32,7 +32,7 @@ export function Footer() {
               </svg>
             </Link>
             <Link
-              href="https://instagram.com/getuserowl"
+              href="https://instagram.com/userowl_com"
               className="group"
               aria-label="Userowl on Instagram"
             >
