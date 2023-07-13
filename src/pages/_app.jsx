@@ -47,6 +47,41 @@ export default function App({ Component, pageProps }) {
           `,
         }}
       />
+      <Script id='userowl-widget' strategy="afterInteractive" dangerouslySetInnerHTML={{
+          __html: `
+          //Your APP ID
+          var APP_ID = '64b0804c13596e47bb1b3d59';
+          
+          window.UserowlSettings = {
+            appId: APP_ID
+          };
+          
+          (function() {
+            var w = window;
+            var uo = w.Userowl = w.Userowl || [];
+            uo.methods = ["open", "close"];
+            w.UserowlQueue = [];
+            uo.f = function(c) {
+              return function() {
+                var args = Array.prototype.slice.call(arguments);
+                window.UserowlQueue.push({
+                  c: c,
+                  a: args
+                })
+              }
+            }
+            for(i = 0; i < uo.methods.length; i++){
+              uo[uo.methods[i]] = uo.f(uo.methods[i]);
+            }
+            var d = document;
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://app.userowl.com/static/widget.js';
+            (d.head || d.body).appendChild(s);
+          })();
+          `,
+        }}
+      />
       {consent === true && (
         <Script
           id="consupd"
