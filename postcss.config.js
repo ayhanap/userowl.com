@@ -9,8 +9,8 @@ module.exports = {
     'postcss-lab-function': {
       preserve: false,
       subFeatures: {
-        displayP3: false
-      }
+        displayP3: false,
+      },
     },
   },
 }

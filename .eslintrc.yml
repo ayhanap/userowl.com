@@ -1,0 +1,39 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  #- plugin:react/recommended
+  - next
+  #- prettier
+  - next/core-web-vitals
+  - airbnb-base
+  - airbnb-typescript
+  - prettier
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+  project: ./tsconfig.json
+plugins:
+  - react
+  - import
+  - prettier
+rules: {
+  react/jsx-indent: [2, 2],
+  react/jsx-indent-props: [2, 2],
+  '@typescript-eslint/no-unused-vars': warn,
+  "arrow-body-style": 0
+}
+settings:
+  import/resolver:
+    node: true
+    typescript: true
+    airbnb-typescript: true
+    alias: 
+      extensions: 
+        - ".js"
+        - ".jsx"
+      map: 
+        -
+          - '@'
+          - '.'
