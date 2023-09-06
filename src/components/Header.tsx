@@ -184,7 +184,7 @@ function MobileNavigation() {
   );
 }
 
-export function Header() {
+export default function Header() {
   return (
     <header className="absolute inset-x-0 flex items-center justify-between py-10">
       <Container className="flex-1">

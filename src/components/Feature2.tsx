@@ -1,7 +1,7 @@
-type Props = {};
-
 import { LinkIcon, MapIcon, TagIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
+
+type Props = {};
 
 const features = [
   {

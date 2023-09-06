@@ -6,7 +6,7 @@ import Feature3 from '@/components/Feature3';
 import Feature4 from '@/components/Feature4';
 import FeatureMain from '@/components/FeatureMain';
 import Footer from '@/components/Footer';
-import { Header } from '@/components/Header';
+import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import { Pricing } from '@/components/Pricing';
 import { PrimaryFeatures } from '@/components/PrimaryFeatures';

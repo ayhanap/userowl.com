@@ -59,7 +59,7 @@ export function useMenu({
     ],
   });
 
-  const context = data.context;
+  const { context } = data;
 
   const hover = useHover(context, {
     move: false,
@@ -133,6 +133,7 @@ export function Menu({ children, ...options }: { children: React.ReactNode } & M
 export const MenuTrigger = React.forwardRef<
   HTMLElement,
   React.HTMLProps<HTMLElement> & { asChild?: boolean }
+  // eslint-disable-next-line prefer-arrow-callback
 >(function MenuTrigger({ children, asChild = false, ...props }, propRef) {
   const context = useMenuContext();
   const childrenRef = (children as any).ref;
@@ -179,6 +180,7 @@ interface MenuContentOptions {
 export const MenuContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLProps<HTMLDivElement> & MenuContentOptions
+  // eslint-disable-next-line prefer-arrow-callback
 >(function MenuContent({ style, motionProps, transitionFn, ...props }, propRef) {
   const context = useMenuContext();
   const ref = useMergeRefs([context.refs.setFloating, propRef]);
@@ -248,7 +250,7 @@ export const MenuItem = React.forwardRef<
   MenuItemProps & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof MenuItemProps>
 >(({ label, href, ...props }, forwardedRef) => {
   const context = useMenuContext();
-  const item = useListItem({ label: label });
+  const item = useListItem({ label });
   const isActive = item.index === context.activeIndex;
 
   return (
@@ -264,3 +266,5 @@ export const MenuItem = React.forwardRef<
     />
   );
 });
+
+MenuItem.displayName = 'SidebarMenu';

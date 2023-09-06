@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import clsx from 'clsx'
+import clsx from 'clsx';
+import Link from 'next/link';
 
 const baseStyles = {
   solid:
     'group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2',
   outline:
     'group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none',
-}
+};
 
 const variantStyles = {
   solid: {
@@ -22,41 +22,41 @@ const variantStyles = {
     white:
       'ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white',
   },
-}
+};
 
-type VariantKey = keyof typeof variantStyles
-type ColorKey<Variant extends VariantKey> =
-  keyof (typeof variantStyles)[Variant]
+type VariantKey = keyof typeof variantStyles;
+type ColorKey<Variant extends VariantKey> = keyof (typeof variantStyles)[Variant];
 
-type ButtonProps<
-  Variant extends VariantKey,
-  Color extends ColorKey<Variant>,
-> = {
-  variant?: Variant
-  color?: Color
+type ButtonProps<Variant extends VariantKey, Color extends ColorKey<Variant>> = {
+  variant?: Variant;
+  color?: Color;
 } & (
   | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
   | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
-      href?: undefined
+      href?: undefined;
     })
-)
+);
 
-export function Button<
-  Color extends ColorKey<Variant>,
-  Variant extends VariantKey = 'solid',
->({ variant, color, className, ...props }: ButtonProps<Variant, Color>) {
-  variant = variant ?? ('solid' as Variant)
-  color = color ?? ('slate' as Color)
+// eslint-disable-next-line import/prefer-default-export
+export function Button<Color extends ColorKey<Variant>, Variant extends VariantKey = 'solid'>({
+  variant,
+  color,
+  className,
+  ...props
+}: ButtonProps<Variant, Color>) {
+  // eslint-disable-next-line no-param-reassign
+  variant = variant ?? ('solid' as Variant);
+  // eslint-disable-next-line no-param-reassign
+  color = color ?? ('slate' as Color);
 
-  className = clsx(
-    baseStyles[variant],
-    variantStyles[variant][color],
-    className,
-  )
+  // eslint-disable-next-line no-param-reassign
+  className = clsx(baseStyles[variant], variantStyles[variant][color], className);
 
   return typeof props.href === 'undefined' ? (
+    // @ts-ignore
     <button className={className} {...props} />
   ) : (
+    // @ts-ignore
     <Link className={className} {...props} />
-  )
+  );
 }

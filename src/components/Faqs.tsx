@@ -2,8 +2,9 @@
 
 import { Container } from '@/components/Container';
 
-import { Disclosure } from '@headlessui/react';
+import { Disclosure, Transition } from '@headlessui/react';
 import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline';
+import { Fragment } from 'react';
 
 const faqs = [
   {
@@ -57,17 +58,50 @@ export default function Example() {
                       <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-900">
                         <span className="text-base font-semibold leading-7">{faq.question}</span>
                         <span className="ml-6 flex h-7 items-center">
-                          {open ? (
-                            <MinusSmallIcon className="h-6 w-6" aria-hidden="true" />
-                          ) : (
-                            <PlusSmallIcon className="h-6 w-6" aria-hidden="true" />
-                          )}
+                          <Transition
+                            as={Fragment}
+                            show={open}
+                            // appear={true}
+                            unmount={false}
+                            enter="transition duration-200 ease-out"
+                            enterFrom="transform-all rotate-90 opacity-80"
+                            enterTo="transform-all rotate-180 opacity-100"
+                            leave="transition duration-200 ease-out"
+                            leaveFrom="transform-all rotate-180 opacity-100"
+                            leaveTo="transform-all rotate-90 opacity-80"
+                          >
+                            <MinusSmallIcon className="absolute h-6 w-6" aria-hidden="true" />
+                          </Transition>
+                          <Transition
+                            as={Fragment}
+                            show={!open}
+                            // appear={true}
+                            unmount={false}
+                            enter="transition duration-200 ease-out"
+                            enterFrom="transform-all rotate-90 opacity-0"
+                            enterTo="transform-all rotate-0 opacity-100"
+                            leave="transition duration-200 ease-out"
+                            leaveFrom="transform-all rotate-0 opacity-100"
+                            leaveTo="transform-all rotate-90 opacity-0"
+                          >
+                            <PlusSmallIcon className="absolute h-6 w-6" aria-hidden="true" />
+                          </Transition>
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                      <p className="text-base leading-7 text-gray-600">{faq.answer}</p>
-                    </Disclosure.Panel>
+                    <Transition
+                      as={Fragment}
+                      enter="transition-all duration-300 ease-in-out"
+                      enterFrom="transform max-h-0 opacity-0"
+                      enterTo="transform max-h-[200px] opacity-100"
+                      leave="transition-all duration-200 ease-in-out"
+                      leaveFrom="transform max-h-[200px] opacity-100"
+                      leaveTo="transform max-h-0 opacity-0"
+                    >
+                      <Disclosure.Panel as="dd" className="mt-2 overflow-hidden pr-1">
+                        <p className="text-base leading-7 text-gray-600">{faq.answer}</p>
+                      </Disclosure.Panel>
+                    </Transition>
                   </>
                 )}
               </Disclosure>

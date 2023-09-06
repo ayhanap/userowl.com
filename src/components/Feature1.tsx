@@ -1,5 +1,3 @@
-type Props = {};
-
 import {
   CommandLineIcon,
   ComputerDesktopIcon,
@@ -11,6 +9,8 @@ import Image from 'next/image';
 
 import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
 import Link from 'next/link';
+
+type Props = {};
 
 const features = [
   {

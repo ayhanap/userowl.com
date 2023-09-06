@@ -1,5 +1,3 @@
-type Props = {};
-
 import {
   ArrowsPointingInIcon,
   ClipboardDocumentListIcon,
@@ -7,6 +5,8 @@ import {
   SwatchIcon,
   UsersIcon,
 } from '@heroicons/react/24/outline';
+
+type Props = {};
 
 const features = [
   {

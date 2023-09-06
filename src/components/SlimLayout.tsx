@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import backgroundImage from '@/images/background-auth.jpg'
+import backgroundImage from '@/images/background-auth.jpg';
 
+// eslint-disable-next-line import/prefer-default-export
 export function SlimLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -21,5 +22,5 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
     </>
-  )
+  );
 }
