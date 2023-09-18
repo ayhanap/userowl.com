@@ -2,19 +2,22 @@ import clsx from 'clsx';
 import { Lexend } from 'next/font/google';
 import Local from 'next/font/local';
 
+import { Providers } from '@/app/providers';
+import Footer from '@/components/Footer';
+import { Header } from '@/components/Header';
 import '@/styles/tailwind.css';
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Userowl',
-    default: 'Userowl - Visual Feedback Tool',
+    default: 'Userowl - Visual Feedback Management Software',
   },
   description:
     'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects',
   twitter: {
     card: 'summary_large_image',
-    title: 'Userowl | Visual Feedback Tool',
+    title: 'Userowl | Visual Feedback Management Software',
     description:
       'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects',
     siteId: '1564720076489629696',
@@ -40,8 +43,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}
+      suppressHydrationWarning
     >
-      <body className="">{children}</body>
+      <body className="">
+        <Providers>
+          {/* <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div> */}
+          <Header isDark={false} />
+          <main>{children}</main>
+          <Footer isDark={false} />
+        </Providers>
+      </body>
     </html>
   );
 }

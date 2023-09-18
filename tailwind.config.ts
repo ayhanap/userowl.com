@@ -71,6 +71,7 @@ const purpleExt = {
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -174,6 +175,10 @@ export default {
       },
       maxWidth: {
         '2xl': '40rem',
+      },
+      screens: {
+        xs: '475px',
+        ...defaultTheme.screens,
       },
     },
   },

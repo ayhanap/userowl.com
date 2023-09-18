@@ -17,7 +17,7 @@ const features = [
     icon: MapIcon,
   },
   {
-    name: 'Merge',
+    name: 'Merge.',
     description:
       'Consolidate similar feature requests into one feedback and individually notify users once the feature is shipped.',
     icon: LinkIcon,

@@ -5,7 +5,7 @@ type Props = {};
 
 const features = [
   {
-    name: 'Two-way integrations',
+    name: 'Two-way integrations.',
     description:
       "Sync feedback status and comments between Userowl and your project management tool. Let your feedback's status update when your dev team finishes development.",
     icon: ArrowsRightLeftIcon,
@@ -16,7 +16,7 @@ const features = [
     icon: BellAlertIcon,
   },
   {
-    name: 'Automations',
+    name: 'Automations.',
     description:
       'Connect your feedback pipeline to numerous applications using Zapier or integrate it with your custom pipeline using webhooks.',
     icon: CogIcon,

@@ -6,18 +6,26 @@ import Link from 'next/link';
 import { Fragment } from 'react';
 
 import LogoColor from '@/assets/logo-color.svg';
+import LogoWhite from '@/assets/logo-white.svg';
+
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import FlyoutMenu, { FlyoutMenuItemProps } from '@/components/navigation/FlyoutMenu';
 import { FloatingDelayGroup } from '@floating-ui/react';
 import {
   AcademicCapIcon,
   BookOpenIcon,
   BugAntIcon,
+  CodeBracketIcon,
   LifebuoyIcon,
   LightBulbIcon,
+  MapIcon,
   NewspaperIcon,
+  PaintBrushIcon,
+  ShieldCheckIcon,
+  ShoppingBagIcon,
   Square3Stack3DIcon,
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline';
@@ -25,31 +33,31 @@ import {
 const features: FlyoutMenuItemProps[] = [
   {
     name: 'Feedback Widget',
-    description: 'Get a better understanding of your traffic',
+    description: 'Collect feedback in your application',
     href: '/features/feedback-widget',
     icon: NewspaperIcon,
   },
   {
     name: 'Bug Tracking',
-    description: 'Speak directly to your customers',
+    description: 'Resolve bugs faster',
     href: '/features/bug-tracking',
     icon: BugAntIcon,
   },
   {
     name: 'Feature Request Management',
-    description: "Your customers' data will be safe and secure",
+    description: 'Prioritize changes that matter',
     href: '/features/feature-request-management',
     icon: LightBulbIcon,
   },
   {
     name: 'Feedback Management',
-    description: 'Build strategic funnels that will convert',
+    description: 'Centralize your feedback management',
     href: '/features/feedback-management',
     icon: Square3Stack3DIcon,
   },
   {
     name: 'Integrations',
-    description: 'Connect with third-party tools',
+    description: "Fits into your team's workflow",
     href: '/features/integrations',
     icon: SquaresPlusIcon,
   },
@@ -57,54 +65,54 @@ const features: FlyoutMenuItemProps[] = [
 
 const useCases: FlyoutMenuItemProps[] = [
   {
-    name: 'Feedback Widget',
-    description: 'Get a better understanding of your traffic',
-    href: '/features/feedback-widget',
-    icon: NewspaperIcon,
+    name: 'Product Management',
+    description: 'No more guessing what your users want',
+    href: '/use-cases/product-management',
+    icon: MapIcon,
   },
   {
-    name: 'Bug Tracking',
-    description: 'Speak directly to your customers',
-    href: '/features/bug-tracking',
-    icon: BugAntIcon,
+    name: 'Software Development',
+    description: 'Consistent and reproducible bug reports',
+    href: '/use-cases/software-development',
+    icon: CodeBracketIcon,
   },
   {
-    name: 'Feature Request Management',
-    description: "Your customers' data will be safe and secure",
-    href: '/features/feature-request-management',
-    icon: LightBulbIcon,
+    name: 'QA & UAT',
+    description: 'Reporting bugs has never been easier',
+    href: '/use-cases/qa-uat',
+    icon: ShieldCheckIcon,
   },
   {
-    name: 'Feedback Management',
-    description: 'Build strategic funnels that will convert',
-    href: '/features/feedback-management',
-    icon: Square3Stack3DIcon,
+    name: 'E-Commerce',
+    description: 'Improve your online store experience',
+    href: '/use-cases/e-commerce',
+    icon: ShoppingBagIcon,
   },
   {
-    name: 'Integrations',
-    description: 'Connect with third-party tools',
-    href: '/features/integrations',
-    icon: SquaresPlusIcon,
+    name: 'Agencies',
+    description: 'Simplify design reviews with clients',
+    href: '/use-cases/agencies',
+    icon: PaintBrushIcon,
   },
 ];
 
 const resources: FlyoutMenuItemProps[] = [
   {
     name: 'Blog',
-    description: 'Get a better understanding of your traffic',
-    href: '/features/feedback-widget',
+    description: 'Discover insights, tips, news and more',
+    href: '/blog',
     icon: BookOpenIcon,
   },
   {
     name: 'Help Center',
-    description: 'Speak directly to your customers',
-    href: '/features/bug-tracking',
+    description: 'Find answers to your questions',
+    href: 'https://help.userol.com',
     icon: LifebuoyIcon,
   },
   {
     name: 'Documentation',
-    description: "Your customers' data will be safe and secure",
-    href: '/features/feature-request-management',
+    description: 'Dive into detailed documentation',
+    href: 'https://docs.userowl.com',
     icon: AcademicCapIcon,
   },
 ];
@@ -184,40 +192,51 @@ function MobileNavigation() {
   );
 }
 
-export default function Header() {
+type Props = {
+  isDark?: boolean;
+};
+export const Header = (props: Props) => {
   return (
-    <header className="absolute inset-x-0 flex items-center justify-between py-10">
-      <Container className="flex-1">
-        <nav className="relative z-50 flex items-center justify-between">
-          <div className="flex items-center md:gap-x-12">
-            <Link href="#" aria-label="Home">
-              <LogoColor className="h-7 w-auto md:mb-3" />
-            </Link>
-            <div className="hidden items-center md:flex md:gap-x-6">
-              <FloatingDelayGroup delay={200}>
-                <FlyoutMenu label="Features" items={features} />
-                <FlyoutMenu label="Use Cases" items={useCases} />
+    <header
+      className={clsx(props.isDark ? 'dark' : null, 'inset-x-0 flex items-center justify-between')}
+    >
+      <div className="flex-1 bg-white py-10 dark:bg-gray-900">
+        <Container>
+          <nav className="relative z-50 flex items-center justify-between">
+            <div className="flex items-center md:gap-x-12">
+              <Link href="/" aria-label="Home">
+                <LogoWhite className="hidden h-7 w-auto dark:block md:mb-3" />
+                <LogoColor className="h-7 w-auto dark:hidden md:mb-3" />
+              </Link>
+              <div className="hidden items-center md:flex md:gap-x-6">
+                <FloatingDelayGroup delay={200}>
+                  <FlyoutMenu label="Features" items={features} isDark={props.isDark} />
+                  <FlyoutMenu label="Use Cases" items={useCases} isDark={props.isDark} />
 
-                <NavLink href="#pricing">Pricing</NavLink>
-                <FlyoutMenu label="Resources" items={resources} />
-              </FloatingDelayGroup>
+                  <NavLink href="/pricing">Pricing</NavLink>
+                  <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} />
+                </FloatingDelayGroup>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              <NavLink href="/login">Sign in</NavLink>
+            <div className="flex items-center gap-x-5 md:gap-x-8">
+              <div className="hidden md:block">
+                <ThemeToggle />
+              </div>
+              <div className="hidden md:block">
+                <NavLink href="https://app.userowl.com/login">Sign in</NavLink>
+              </div>
+              <Button href="https://app.userowl.com/signup" color="blue">
+                <span>
+                  Start free <span className="hidden lg:inline">today</span>
+                </span>
+              </Button>
+              <div className="-mr-1 md:hidden">
+                <MobileNavigation />
+              </div>
             </div>
-            <Button href="/register" color="blue">
-              <span>
-                Start free <span className="hidden lg:inline">today</span>
-              </span>
-            </Button>
-            <div className="-mr-1 md:hidden">
-              <MobileNavigation />
-            </div>
-          </div>
-        </nav>
-      </Container>
+          </nav>
+        </Container>
+      </div>
     </header>
   );
-}
+};

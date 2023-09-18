@@ -1,12 +1,15 @@
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@/components/navigation/Menu';
 import useCheckMobileScreen from '@/util/useCheckMobileScreen';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export type Props = {
   label: string;
   items: FlyoutMenuItemProps[];
+  isDark?: boolean;
 };
 
 export interface FlyoutMenuItemProps {
@@ -26,10 +29,17 @@ const callsToAction = [
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ];
 
-const FlyoutMenu = ({ label, items }: Props) => {
+const FlyoutMenu = ({ label, items, isDark }: Props) => {
   const isMobile = useCheckMobileScreen();
+  const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+    // You can now use the current URL
+    // ...
+  }, [pathname]);
 
   const parentVariant = {
     closed: {},
@@ -46,14 +56,14 @@ const FlyoutMenu = ({ label, items }: Props) => {
       <Menu open={isMobile ? open : undefined} onOpenChange={isMobile ? setOpen : undefined}>
         <MenuTrigger
           onClick={() => (isMobile ? setOpen((v) => !v) : undefined)}
-          className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900"
+          className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-gray-200"
         >
           <span>{label}</span>
           <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
         </MenuTrigger>
 
         <MenuContent
-          className="z-10 mt-5 flex w-screen max-w-max px-4"
+          className={clsx(isDark ? 'dark' : null, 'z-10 mt-5 flex w-screen max-w-max px-4')}
           motionProps={{
             initial: { opacity: 0, scale: 0.85 },
             animate: { opacity: 1, scale: 1 },
@@ -65,7 +75,7 @@ const FlyoutMenu = ({ label, items }: Props) => {
               : { duration: 0.2 };
           }}
         >
-          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+          <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 dark:bg-gray-800 dark:ring-white/5">
             <motion.ul
               initial="closed"
               exit="closed"
@@ -89,23 +99,23 @@ const FlyoutMenu = ({ label, items }: Props) => {
                   <MenuItem
                     href={item.href}
                     label={item.name}
-                    className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50"
+                    className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700"
                   >
-                    <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                    <div className="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white dark:bg-gray-700 dark:group-hover:bg-gray-800">
                       <item.icon
-                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600 dark:text-gray-300 dark:group-hover:text-indigo-400"
                         aria-hidden="true"
                       />
                     </div>
                     <div className="border-transparent focus:border-transparent focus:ring-0 focus:ring-offset-0">
                       <div
                         //
-                        className="font-semibold text-gray-900"
+                        className="font-semibold text-gray-900 dark:text-white"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
                       </div>
-                      <p className="mt-1 text-gray-600">{item.description}</p>
+                      <p className="mt-1 text-gray-600 dark:text-gray-300">{item.description}</p>
                     </div>
                   </MenuItem>
                 </motion.li>
