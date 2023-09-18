@@ -195,6 +195,7 @@ function MobileNavigation() {
 type Props = {
   isDark?: boolean;
 };
+// eslint-disable-next-line import/prefer-default-export
 export const Header = (props: Props) => {
   return (
     <header
