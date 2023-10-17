@@ -38,6 +38,7 @@
     "eslint-config-next": "13.4.16",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
+    "file-loader": "^6.2.0",
     "postcss-focus-visible": "^9.0.0",
     "postcss-lab-function": "^6.0.2",
     "prettier": "^3.0.1",

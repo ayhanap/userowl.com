@@ -8,9 +8,15 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
+import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
 import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
 import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
 import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import vd001 from '@/videos/VD-001-encoded-RF22.mp4';
+import vd002 from '@/videos/VD-002-zoom-encoded-RF26.mp4';
+import vd003 from '@/videos/VD-003-encoded-RF22.mp4';
+import vd004 from '@/videos/VD-004-encoded-RF22.mp4';
+
 import { Feature } from '@/types/feature';
 
 import {
@@ -207,6 +213,7 @@ export default function Home() {
         ctaHref="https://app.userowl.com/signup"
         image={screenshotFeedbackView}
         imageAlt="Image Alt"
+        video={vd001}
         learnMoreText="Learn More"
         learnMoreHref="#feedback-widget"
         isDark={false}
@@ -231,6 +238,7 @@ export default function Home() {
         hashtag="Bug tracking"
         image={screenshotFeedbackView}
         imageAlt="Image Alt"
+        video={vd002}
       >
         <LearnMoreLink href="/features/bug-tracking" />
         <FeatureList features={bugTrackingFeatures} />
@@ -244,6 +252,7 @@ export default function Home() {
         image={screenshot}
         imageAlt="Image Alt"
         imageOnLeft={true}
+        video={vd003}
       >
         <LearnMoreLink href="/features/feature-request-management" />
         <FeatureList features={featureRequestManagementFeatures} />
@@ -261,6 +270,7 @@ export default function Home() {
         image={screenshotFeedbackViewCondense}
         imageAlt="Image Alt"
         isDark={true}
+        video={vd004}
       >
         <LearnMoreLink href="/features/feedback-management" />
         <FeatureList features={feedbackManagementFeatures} />
@@ -271,10 +281,11 @@ export default function Home() {
         title="Fits into your team's workflow"
         description="Userowl integrates with the tools you already use for product management, customer support and communication."
         hashtag="Integrations"
-        image={screenshot}
+        svgImage={integrationLogosAnim}
         imageAlt="Image Alt"
         imageOnLeft={true}
         isDark={true}
+        equalSizeImage={true}
       >
         <LearnMoreLink href="/features/integrations" />
         <FeatureList features={integrationFeatures} />

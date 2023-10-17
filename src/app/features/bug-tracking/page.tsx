@@ -6,9 +6,11 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import vd001 from '@/videos/VD-001-encoded-RF22.mp4';
+import vd002 from '@/videos/VD-002-encoded-RF26.mp4';
+import vd013 from '@/videos/VD-013-encoded-RF26.mp4';
+import vd023 from '@/videos/VD-023-encoded-RF26.mp4';
+import vd024 from '@/videos/VD-024-encoded-RF26.mp4';
 
 const faqs: Faq[] = [
   {
@@ -61,7 +63,7 @@ export default function BugTracking() {
         description="Reduce bug resolution times with visual bug reports that include session info, user data and in-depth logs."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
+        video={vd001}
         imageAlt="Image Alt"
         isDark={false}
       />
@@ -71,7 +73,7 @@ export default function BugTracking() {
         title="Automatically Capture Session Information"
         description="Each feedback contains session details such as URL, OS, and browser, resolution, location and more."
         hashtag="Session info"
-        image={screenshotFeedbackView}
+        video={vd002}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -82,7 +84,7 @@ export default function BugTracking() {
         title="Associate Your Customer Info"
         description="You can identify your users to let feedback to also include essential user details so you can contact them or prioritize feedback accordingly. You can also include any other info related to your business case as custom information."
         hashtag="User information"
-        image={screenshot}
+        video={vd023}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >
@@ -98,7 +100,7 @@ export default function BugTracking() {
         title="Don't Lose Crucial Technical Info"
         description="Console errors and logs automatically captured and included so your developers can reproduce every bug."
         hashtag="Console logs"
-        image={screenshotFeedbackViewCondense}
+        video={vd024}
         imageAlt="Image Alt"
         isDark={true}
       >
@@ -110,7 +112,7 @@ export default function BugTracking() {
         title="See What Problem Your Users Are Facing"
         description="Your users can mark application issues using a user-friendly screen annotation tool, or you can opt for automatic screenshot inclusion with each feedback."
         hashtag="Annotated screenshots"
-        image={screenshot}
+        video={vd013}
         imageAlt="Image Alt"
         imageOnLeft={true}
         isDark={true}

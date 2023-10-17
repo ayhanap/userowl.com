@@ -7,8 +7,11 @@ import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
 import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+
+import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
+import vd031 from '@/videos/VD-031-encoded-RF26.mp4';
+import vd032 from '@/videos/VD-032-encoded-RF26.mp4';
+import vd033 from '@/videos/VD-033-encoded-RF26.mp4';
 
 const faqs: Faq[] = [
   {
@@ -61,8 +64,7 @@ export default function ProductManagement() {
         description="No more guessing what your users want. Hear from them directly, then make the changes they care about."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
-        imageAlt="Image Alt"
+        noImage={true}
         isDark={false}
       />
       <FeatureWithScreenshotOnSide
@@ -71,7 +73,7 @@ export default function ProductManagement() {
         title="Listen to Your Users"
         description="Userowl allows your users to effortlessly send feature requests and bug reports within your application. You possess all the tools to effectively manage it and guide your product development based on user needs."
         hashtag="Feedback widget"
-        image={screenshotFeedbackView}
+        video={vd031}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -82,7 +84,7 @@ export default function ProductManagement() {
         title="Plan Your Roadmap"
         description="Prioritize what to build according to user insights and analytics. "
         hashtag="Prioritize and plan"
-        image={screenshot}
+        video={vd033}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >
@@ -106,7 +108,7 @@ export default function ProductManagement() {
         title="Organize Feature Requests In Your Way"
         description="Manage feedback with the workflow that suits you. Tag and group the feature requests to match your product pipeline."
         hashtag="Organize"
-        image={screenshotFeedbackView}
+        video={vd032}
         imageOnLeft={true}
         imageAlt="Image Alt"
         isDark={true}
@@ -119,7 +121,7 @@ export default function ProductManagement() {
         title="Use Your Existing Tools"
         description="Userowl integrates with the tools you already use for product management, customer support and communication. "
         hashtag="Integrations"
-        image={screenshot}
+        svgImage={integrationLogosAnim}
         imageAlt="Image Alt"
         imageOnLeft={false}
         isDark={true}

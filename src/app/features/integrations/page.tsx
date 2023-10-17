@@ -6,9 +6,11 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import zapierIntegration from '@/images/illustrations/zapier-integration.svg';
+import slackDiscordIntegration from '@/images/illustrations/slack-discord-integration.svg';
+
+import vd051 from '@/videos/VD-051-encoded-RF22.mp4';
+import vd052 from '@/videos/VD-052-encoded-RF22.mp4';
 
 const faqs: Faq[] = [
   {
@@ -61,9 +63,10 @@ export default function Integrations() {
         description="Userowl integrates with the tools you already use for product management, customer support and communication."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
+        video={vd051}
         imageAlt="Image Alt"
         isDark={false}
+        // sideBySize={true}
       />
       <FeatureWithScreenshotOnSide
         id="two-way"
@@ -71,7 +74,7 @@ export default function Integrations() {
         title="Stay in Sync"
         description="Sync feedback status and comments between Userowl and your project management tool. Let your feedback's status update when your dev team finishes development."
         hashtag="Two-way integrations"
-        image={screenshotFeedbackView}
+        video={vd052}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -82,7 +85,8 @@ export default function Integrations() {
         title="Stay Informed Using Your Tools"
         description="Receive feedback notifications on your team's favorite messaging tool."
         hashtag="Notifications"
-        image={screenshot}
+        svgImage={slackDiscordIntegration}
+        equalSizeImage={true}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >
@@ -94,12 +98,14 @@ export default function Integrations() {
         title="Create Automations With 1000s of Tools."
         description="Connect your feedback pipeline to numerous applications using Zapier or integrate it with your custom pipeline using webhooks."
         hashtag="Automations"
-        image={screenshotFeedbackViewCondense}
+        svgImage={zapierIntegration}
+        equalSizeImage={true}
         imageAlt="Image Alt"
         isDark={false}
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
       </FeatureWithScreenshotOnSide>
+      <div className="hidden stroke-purple-600 dark:stroke-purple-300"></div>
       {/* TODO:show all integrations */}
       <CallToAction />
       <Faqs faqs={faqs} isDark={false} />

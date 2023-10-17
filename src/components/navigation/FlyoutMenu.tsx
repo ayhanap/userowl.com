@@ -1,4 +1,5 @@
 import { Menu, MenuContent, MenuItem, MenuTrigger } from '@/components/navigation/Menu';
+import NavItem from '@/components/navigation/navItem';
 import useCheckMobileScreen from '@/util/useCheckMobileScreen';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
@@ -8,21 +9,21 @@ import { useEffect, useState } from 'react';
 
 export type Props = {
   label: string;
-  items: FlyoutMenuItemProps[];
+  items: NavItem[];
   isDark?: boolean;
 };
 
-export interface FlyoutMenuItemProps {
-  name: string;
-  description: string;
-  href: string;
-  icon: React.ForwardRefExoticComponent<
-    Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
-      title?: string | undefined;
-      titleId?: string | undefined;
-    } & React.RefAttributes<SVGSVGElement>
-  >;
-}
+// export interface FlyoutMenuItemProps {
+//   name: string;
+//   description: string;
+//   href: string;
+//   icon: React.ForwardRefExoticComponent<
+//     Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
+//       title?: string | undefined;
+//       titleId?: string | undefined;
+//     } & React.RefAttributes<SVGSVGElement>
+//   >;
+// }
 
 const callsToAction = [
   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },

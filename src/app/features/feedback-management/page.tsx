@@ -7,8 +7,9 @@ import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
 import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+
+import vd042 from '@/videos/VD-042-encoded-RF-22.mp4';
+import vd043 from '@/videos/VD-043-encoded-RF22.mp4';
 
 const faqs: Faq[] = [
   {
@@ -61,9 +62,8 @@ export default function FeedbackManagement() {
         description="Userowl is the only tool you need to manage your feedback. Invite your team, connect your tools, and personalize according to your needs."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
-        imageAlt="Image Alt"
         isDark={false}
+        noImage={true}
       />
       <FeatureWithScreenshotOnSide
         id="teams"
@@ -71,7 +71,7 @@ export default function FeedbackManagement() {
         title="Collaborate With Your Team"
         description="Invite your QA, support, product, dev teams and even your clients. Your team has all the tools to manage and close the feedback loop."
         hashtag="Teams"
-        image={screenshotFeedbackView}
+        video={vd042}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -82,7 +82,7 @@ export default function FeedbackManagement() {
         title="Personalize To Fit Your Workflow"
         description="Whether you use Scrum, Kanban, Waterfall, or your custom workflow, Userowl allows you to customize your feedback workflow, aligning it with your team."
         hashtag="Personalize workflow"
-        image={screenshot}
+        video={vd043}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >

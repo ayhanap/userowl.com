@@ -10,11 +10,15 @@ type Props = {
   title: string;
   description: string;
   hashtag: string;
-  image: StaticImageData;
+  image?: StaticImageData;
   imageAlt: string;
+  video?: string;
+  svgImage?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   imageOnLeft?: boolean;
   children?: React.ReactNode;
   isDark?: boolean;
+  displayRing?: boolean;
+  equalSizeImage?: boolean;
 };
 
 const FeatureWithScreenshotOnSide = (props: Props) => {
@@ -25,19 +29,25 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
       className={clsx(props.isDark ? 'dark' : null)}
     >
       <div className="overflow-hidden bg-white py-24 dark:bg-gray-900 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          className={clsx(
+            props.equalSizeImage ? 'equal' : 'big',
+            'group mx-auto max-w-7xl px-6 lg:px-8',
+          )}
+        >
           <div
             className={clsx(
+              props.svgImage ? 'items-center' : null,
               props.imageOnLeft
-                ? 'xl:grid-cols-[minmax(0,_2fr)_minmax(max-content,_1fr)]'
-                : 'xl:grid-cols-[minmax(max-content,_1fr)_minmax(0,_2fr)]',
-              'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none',
+                ? 'group-[.big]:xl:grid-cols-[minmax(0,_2fr)_minmax(max-content,_1fr)] group-[.equal]:xl:grid-cols-2 2xl:grid-cols-2'
+                : 'group-[.big]:xl:grid-cols-[minmax(max-content,_1fr)_minmax(0,_2fr)] group-[.equal]:xl:grid-cols-2 2xl:grid-cols-2',
+              'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-3xl xl:mx-0 xl:max-w-none',
             )}
           >
             <div
-              className={clsx(props.imageOnLeft ? 'lg:ml-auto  lg:pl-4' : 'lg:pr-8 ', 'lg:pt-4')}
+              className={clsx(props.imageOnLeft ? 'xl:ml-auto  xl:pl-8' : 'xl:pr-8 ', 'xl:pt-4')}
             >
-              <div className="xl:w-[28rem] xl:max-w-md 2xl:w-[32rem] 2xl:max-w-lg">
+              <div className="group-[.equal]:max-w-auto group-[.big]:xl:w-[28rem] group-[.equal]:xl:w-auto group-[.big]:xl:max-w-md group-[.big]:2xl:w-[32rem] group-[.big]:2xl:max-w-lg">
                 <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
                   {props.hashtag}
                 </h2>
@@ -52,15 +62,55 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
             </div>
             <div
               className={clsx(
-                props.imageOnLeft ? 'justify-end xl:order-first' : null,
-                'flex items-center',
+                props.imageOnLeft
+                  ? 'group-[.big]:xl:order-first group-[.equal]:xl:order-first'
+                  : null,
+                '',
               )}
             >
-              <Image
-                src={props.image}
-                alt={props.imageAlt}
-                className="w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 dark:ring-white/10 xs:w-[36rem] sm:w-[48rem] md:-ml-4 md:w-[57rem] lg:-ml-0"
-              />
+              {props.svgImage ? (
+                <props.svgImage
+                  className={clsx(
+                    props.imageOnLeft ? 'float-right' : '',
+                    'w-[28rem] max-w-full max-w-none xs:w-[36rem]',
+                  )}
+                />
+              ) : (
+                <>
+                  {props.image ? (
+                    <Image
+                      src={props.image}
+                      alt={props.imageAlt}
+                      quality={90}
+                      placeholder="blur"
+                      sizes="(min-width: 768px) 57rem, (min-width: 640px) 48rem, (min-width: 475px) 36rem, 28rem"
+                      className={clsx(
+                        props.video ? 'md:hidden' : '',
+                        props.imageOnLeft ? 'float-right' : '',
+                        'aspect-[3/2] w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 dark:ring-white/10 xs:w-[36rem] sm:w-[48rem]  md:-ml-4 md:w-[57rem] lg:-ml-0',
+                      )}
+                    />
+                  ) : null}
+                  {props.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      playsInline
+                      muted
+                      preload="auto"
+                      width={1284}
+                      height={856}
+                      className={clsx(
+                        props.video ? 'md:block' : '',
+                        props.imageOnLeft ? 'float-right' : '',
+                        'hidden aspect-[3/2] w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 dark:ring-white/10 xs:w-[36rem] sm:w-[48rem] md:-ml-4 md:w-[57rem] lg:-ml-0',
+                      )}
+                    >
+                      <source src={props.video} type="video/mp4" />
+                    </video>
+                  ) : null}
+                </>
+              )}
             </div>
           </div>
         </div>

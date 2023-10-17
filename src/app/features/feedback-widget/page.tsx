@@ -6,9 +6,12 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import sc001 from '@/images/screenshots/SC-001_Installation@3x.png';
+import vd001 from '@/videos/VD-001-encoded-RF22.mp4';
+import vd011 from '@/videos/VD-011-cropped-encoded-RF26.mp4';
+import vd013 from '@/videos/VD-013-encoded-RF26.mp4';
+import vd014 from '@/videos/VD-014-encoded-RF26.mp4';
+import vd015 from '@/videos/VD-015-encoded-RF28.mp4';
 
 const faqs: Faq[] = [
   {
@@ -61,9 +64,12 @@ export default function FeedbackWidget() {
         description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs or feature requests directly from your website or app."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
+        // image={screenshotFeedbackView}
         imageAlt="Image Alt"
         isDark={false}
+        video={vd011}
+        width={1282}
+        height={854}
       />
       <FeatureWithScreenshotOnSide
         id="engage-customers"
@@ -71,7 +77,7 @@ export default function FeedbackWidget() {
         title="Make Your Customers an Extension of Your Team"
         description="Your users can use the feedback widget directly on the page they are using and report problems they are facing in seconds."
         hashtag="Engage customers"
-        image={screenshotFeedbackView}
+        video={vd001}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -79,10 +85,10 @@ export default function FeedbackWidget() {
       <FeatureWithScreenshotOnSide
         id="annotate-screen"
         ariaLabel="Features for associating your user information"
-        title="No Need To Install Tools To Annotate Screen"
+        title="No Tools Needed To Annotate Screen"
         description="Your users can annotate screen to mark issues directly in your website without needing any other tool."
         hashtag="Annotate screen"
-        image={screenshot}
+        video={vd013}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >
@@ -98,7 +104,7 @@ export default function FeedbackWidget() {
         title="One Time Easy Setup In Minutes"
         description="Effortlessly install the feedback widget once and manage all configurations through the Userowl dashboard."
         hashtag="No code"
-        image={screenshotFeedbackViewCondense}
+        image={sc001}
         imageAlt="Image Alt"
         isDark={true}
       >
@@ -111,7 +117,7 @@ export default function FeedbackWidget() {
         title="Beautifully Match Your Brand"
         description="Personalize the widget to match your brand and specific requirements."
         hashtag="Branding"
-        image={screenshot}
+        video={vd014}
         imageAlt="Image Alt"
         imageOnLeft={true}
         isDark={true}
@@ -125,7 +131,7 @@ export default function FeedbackWidget() {
         title="Useful Data In Every Feedback"
         description="Essential data, including session info, user info, console logs, network logs, and more, is automatically attached to the feedback."
         hashtag="Capture all the data"
-        image={screenshot}
+        video={vd015}
         imageAlt="Image Alt"
         imageOnLeft={false}
         isDark={true}

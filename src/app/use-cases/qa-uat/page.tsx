@@ -6,9 +6,10 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import vd121 from '@/videos/VD-121-encoded-RF26.mp4';
+import vd122 from '@/videos/VD-122-encoded-RF28.mp4';
+import vd124 from '@/videos/VD-124-encoded-RF26.mp4';
+import vd123 from '@/videos/VD-123-encoded-RF28.mp4';
 
 const faqs: Faq[] = [
   {
@@ -58,20 +59,19 @@ export default function QaUAT() {
     <>
       <Hero
         title="Reporting Issues Have Never Been Easier"
-        description="Feedback widget allows you to report bugs directly in your app without needing any other tools. No more files and folders of endless untitled screenshots and docs. "
+        description="Userowl feedback widget allows you to report bugs directly in your app without needing any other tools. No more files and folders of endless untitled screenshots and docs. "
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
-        imageAlt="Image Alt"
+        noImage={true}
         isDark={false}
       />
       <FeatureWithScreenshotOnSide
         id="in-app-reporting"
         ariaLabel="Features for reporting bugs"
-        title="Spend Less Time Reporing Bugs"
-        description="Manually taking screenshots with third-party tools and filling information for bug reports take up a lot of your time. Userowl lets you report bugs without switching to other tools."
+        title="Spend Less Time Reporting Bugs"
+        description="Manually taking screenshots with third-party tools and filling in information for bug reports take up a lot of your time. Userowl lets you report bugs without switching to other tools."
         hashtag="In-app reporting"
-        image={screenshotFeedbackView}
+        video={vd121}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -82,7 +82,7 @@ export default function QaUAT() {
         title="Provide Useful Information To Your Developers"
         description="Without any extra effort, Userowl automatically includes information to reproduce the bugs you reported. With auto-included session info and technical logs, your developers will not request additional details from you."
         hashtag="Technical information"
-        image={screenshot}
+        video={vd122}
         imageAlt="Image Alt"
         imageOnLeft={true}
       >
@@ -98,7 +98,7 @@ export default function QaUAT() {
         title="Your End Users Will Be Power Testers"
         description="Your UAT testers with limited technical capabilities and tools in hand can send incomplete bug reports. Userowl allows them to report consistent and rich bug reports with all the information your team needs."
         hashtag="UAT"
-        image={screenshotFeedbackViewCondense}
+        video={vd123}
         imageAlt="Image Alt"
         isDark={true}
       >
@@ -110,7 +110,7 @@ export default function QaUAT() {
         title="Stop Switching Tabs To Report Bugs"
         description="You can send feedback reports directly to your project management tool. You'll no longer waste time managing files to upload and filling in information."
         hashtag="Integrations"
-        image={screenshot}
+        video={vd124}
         imageAlt="Image Alt"
         imageOnLeft={true}
         isDark={true}

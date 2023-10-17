@@ -3,7 +3,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { Fragment } from 'react';
+import { Fragment, useRef } from 'react';
 
 import LogoColor from '@/assets/logo-color.svg';
 import LogoWhite from '@/assets/logo-white.svg';
@@ -12,7 +12,9 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import FlyoutMenu, { FlyoutMenuItemProps } from '@/components/navigation/FlyoutMenu';
+import FlyoutMenu from '@/components/navigation/FlyoutMenu';
+import SidebarNav from '@/components/navigation/SidebarNav';
+import NavItem from '@/components/navigation/navItem';
 import { FloatingDelayGroup } from '@floating-ui/react';
 import {
   AcademicCapIcon,
@@ -30,7 +32,7 @@ import {
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline';
 
-const features: FlyoutMenuItemProps[] = [
+const features: NavItem[] = [
   {
     name: 'Feedback Widget',
     description: 'Collect feedback in your application',
@@ -63,7 +65,7 @@ const features: FlyoutMenuItemProps[] = [
   },
 ];
 
-const useCases: FlyoutMenuItemProps[] = [
+const useCases: NavItem[] = [
   {
     name: 'Product Management',
     description: 'No more guessing what your users want',
@@ -96,7 +98,7 @@ const useCases: FlyoutMenuItemProps[] = [
   },
 ];
 
-const resources: FlyoutMenuItemProps[] = [
+const resources: NavItem[] = [
   {
     name: 'Blog',
     description: 'Discover insights, tips, news and more',
@@ -114,6 +116,28 @@ const resources: FlyoutMenuItemProps[] = [
     description: 'Dive into detailed documentation',
     href: 'https://docs.userowl.com',
     icon: AcademicCapIcon,
+  },
+];
+
+const navigation: NavItem[] = [
+  {
+    name: 'Features',
+    href: '/features',
+    children: features,
+  },
+  {
+    name: 'Use Cases',
+    href: '/use-cases',
+    children: useCases,
+  },
+  {
+    name: 'Pricing',
+    href: '/pricing',
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: resources,
   },
 ];
 
@@ -195,21 +219,24 @@ function MobileNavigation() {
 type Props = {
   isDark?: boolean;
 };
+
 // eslint-disable-next-line import/prefer-default-export
 export const Header = (props: Props) => {
+  const hamburgerMenuRef = useRef<HTMLButtonElement>(null);
+
   return (
     <header
       className={clsx(props.isDark ? 'dark' : null, 'inset-x-0 flex items-center justify-between')}
     >
       <div className="flex-1 bg-white py-10 dark:bg-gray-900">
         <Container>
-          <nav className="relative z-50 flex items-center justify-between">
+          <nav className="relative z-30 flex items-center justify-between">
             <div className="flex items-center md:gap-x-12">
               <Link href="/" aria-label="Home">
                 <LogoWhite className="hidden h-7 w-auto dark:block md:mb-3" />
                 <LogoColor className="h-7 w-auto dark:hidden md:mb-3" />
               </Link>
-              <div className="hidden items-center md:flex md:gap-x-6">
+              <div className="hidden items-center md:gap-x-6 lg:flex">
                 <FloatingDelayGroup delay={200}>
                   <FlyoutMenu label="Features" items={features} isDark={props.isDark} />
                   <FlyoutMenu label="Use Cases" items={useCases} isDark={props.isDark} />
@@ -218,12 +245,13 @@ export const Header = (props: Props) => {
                   <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} />
                 </FloatingDelayGroup>
               </div>
+              <SidebarNav ref={hamburgerMenuRef} items={navigation} />
             </div>
             <div className="flex items-center gap-x-5 md:gap-x-8">
-              <div className="hidden md:block">
+              <div className="hidden sm:block">
                 <ThemeToggle />
               </div>
-              <div className="hidden md:block">
+              <div className="hidden sm:block">
                 <NavLink href="https://app.userowl.com/login">Sign in</NavLink>
               </div>
               <Button href="https://app.userowl.com/signup" color="blue">
@@ -231,8 +259,26 @@ export const Header = (props: Props) => {
                   Start free <span className="hidden lg:inline">today</span>
                 </span>
               </Button>
-              <div className="-mr-1 md:hidden">
-                <MobileNavigation />
+              <div className="-mr-1 lg:hidden">
+                {/* <MobileNavigation /> */}
+                <button
+                  className="relative z-10 flex h-8 w-8 items-center justify-center ui-not-focus-visible:outline-none"
+                  aria-label="Toggle Navigation"
+                  onClick={() => {
+                    hamburgerMenuRef.current?.click();
+                  }}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+                    fill="none"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                  >
+                    <path d="M0 1H14M0 7H14M0 13H14" className={clsx('origin-center transition')} />
+                    {/* <path d="M2 2L12 12M12 2L2 12" className={clsx('origin-center transition')} /> */}
+                  </svg>
+                </button>
               </div>
             </div>
           </nav>

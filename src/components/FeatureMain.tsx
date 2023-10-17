@@ -1,6 +1,8 @@
+import { LearnMoreLink } from '@/components/FeatureWithScreenshotOnSide';
 import { Feature } from '@/types/feature';
+import vd001 from '@/videos/VD-001-encoded-RF22.mp4';
 import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
+import { StaticImageData } from 'next/image';
 
 type Props = {
   id: string;
@@ -37,11 +39,23 @@ const FeatureMain = (props: Props) => {
         </div>
         <div className="relative overflow-hidden pt-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <Image
+            {/* <Image
               src={props.image}
               alt={props.imageAlt}
               className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10 ring-white/10"
-            />
+            /> */}
+            <video
+              autoPlay
+              loop
+              playsInline
+              muted
+              preload="auto"
+              width={1284}
+              height={856}
+              className="mb-[-7%] aspect-[3/2] rounded-xl shadow-2xl ring-1 ring-gray-900/10 ring-white/10"
+            >
+              <source src={vd001} type="video/mp4" />
+            </video>
             <div className="relative" aria-hidden="true">
               <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%] dark:from-gray-900" />
             </div>
@@ -62,6 +76,9 @@ const FeatureMain = (props: Props) => {
               </div>
             ))}
           </dl>
+          <div className="mt-2 flex justify-center">
+            <LearnMoreLink href="/features/feedback-widget" />
+          </div>
         </div>
       </div>
     </section>
