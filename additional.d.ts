@@ -7,6 +7,10 @@ declare module '*.mp4' {
 declare module '*.m4v' {
   export default string;
 }
+
+declare module '*.webm' {
+  export default string;
+}
 declare module '*.svg' {
   import React from 'react';
 

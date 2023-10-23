@@ -10,7 +10,7 @@ type Props = {
   title: string;
   description: string;
   hashtag: string;
-  image: StaticImageData;
+  image?: StaticImageData;
   imageAlt: string;
   features: Feature[];
   isDark?: boolean;

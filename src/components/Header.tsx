@@ -25,9 +25,7 @@ import {
   LightBulbIcon,
   MapIcon,
   NewspaperIcon,
-  PaintBrushIcon,
   ShieldCheckIcon,
-  ShoppingBagIcon,
   Square3Stack3DIcon,
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline';
@@ -84,18 +82,18 @@ const useCases: NavItem[] = [
     href: '/use-cases/qa-uat',
     icon: ShieldCheckIcon,
   },
-  {
-    name: 'E-Commerce',
-    description: 'Improve your online store experience',
-    href: '/use-cases/e-commerce',
-    icon: ShoppingBagIcon,
-  },
-  {
-    name: 'Agencies',
-    description: 'Simplify design reviews with clients',
-    href: '/use-cases/agencies',
-    icon: PaintBrushIcon,
-  },
+  // {
+  //   name: 'E-Commerce',
+  //   description: 'Improve your online store experience',
+  //   href: '/use-cases/e-commerce',
+  //   icon: ShoppingBagIcon,
+  // },
+  // {
+  //   name: 'Agencies',
+  //   description: 'Simplify design reviews with clients',
+  //   href: '/use-cases/agencies',
+  //   icon: PaintBrushIcon,
+  // },
 ];
 
 const resources: NavItem[] = [
@@ -108,7 +106,7 @@ const resources: NavItem[] = [
   {
     name: 'Help Center',
     description: 'Find answers to your questions',
-    href: 'https://help.userol.com',
+    href: 'https://help.userowl.com',
     icon: LifebuoyIcon,
   },
   {
@@ -134,11 +132,11 @@ const navigation: NavItem[] = [
     name: 'Pricing',
     href: '/pricing',
   },
-  {
-    name: 'Resources',
-    href: '/resources',
-    children: resources,
-  },
+  // {
+  //   name: 'Resources',
+  //   href: '/resources',
+  //   children: resources,
+  // },
 ];
 
 function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -242,7 +240,7 @@ export const Header = (props: Props) => {
                   <FlyoutMenu label="Use Cases" items={useCases} isDark={props.isDark} />
 
                   <NavLink href="/pricing">Pricing</NavLink>
-                  <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} />
+                  {/* <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} /> */}
                 </FloatingDelayGroup>
               </div>
               <SidebarNav ref={hamburgerMenuRef} items={navigation} />

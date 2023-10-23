@@ -17,8 +17,11 @@ type Props = {
   isDark?: boolean;
   width?: number;
   height?: number;
-  sideBySize?: boolean;
+  sideBySide?: boolean;
   noImage?: boolean;
+  equalSizeImage?: boolean;
+  noRing?: boolean;
+  children?: React.ReactNode;
 };
 
 const Hero = (props: Props) => {
@@ -28,14 +31,16 @@ const Hero = (props: Props) => {
         <div className="py-24 sm:py-32 lg:pb-40">
           <div
             className={clsx(
-              props.sideBySize ? 'items-center pb-24 pt-10 sm:pb-32 lg:flex' : '',
+              props.sideBySide ? 'items-center pt-10 lg:flex' : '',
               'mx-auto max-w-7xl px-6 lg:px-8',
             )}
           >
             <div
               className={clsx(
-                props.sideBySize ? 'lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8' : 'text-center',
-                'mx-auto max-w-2xl',
+                props.sideBySide
+                  ? 'max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0 lg:pt-8 xl:max-w-xl'
+                  : 'max-w-2xl text-center',
+                'mx-auto ',
               )}
             >
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
@@ -46,7 +51,7 @@ const Hero = (props: Props) => {
               </p>
               <div
                 className={clsx(
-                  props.sideBySize ? '' : 'justify-center',
+                  props.sideBySide ? '' : 'justify-center',
                   'items-top mt-10 flex gap-x-6',
                 )}
               >
@@ -85,10 +90,11 @@ const Hero = (props: Props) => {
                 ) : null} */}
               </div>
             </div>
+            {props.children ? props.children : null}
             {props.noImage ? null : (
               <div
                 className={clsx(
-                  props.sideBySize
+                  props.sideBySide
                     ? 'mx-auto flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32'
                     : 'flow-root',
                   'mt-16 sm:mt-24',
@@ -96,7 +102,7 @@ const Hero = (props: Props) => {
               >
                 <div
                   className={clsx(
-                    props.svgImage
+                    props.equalSizeImage
                       ? 'w-full max-w-full lg:w-[30rem]'
                       : '-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 dark:bg-white/5 dark:ring-white/10 lg:-m-4 lg:rounded-2xl lg:p-4 ',
                     '',
@@ -115,7 +121,12 @@ const Hero = (props: Props) => {
                         <Image
                           src={props.image}
                           alt={props.imageAlt}
-                          className="aspect-[3/2] rounded-lg shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10 md:hidden"
+                          className={clsx(
+                            props.noRing
+                              ? ''
+                              : 'shadow-2xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 ',
+                            'aspect-[3/2] rounded-lg md:hidden',
+                          )}
                         />
                       ) : null}
                       {props.video ? (
@@ -127,7 +138,13 @@ const Hero = (props: Props) => {
                           preload="auto"
                           width={props.width ? props.width : 1284}
                           height={props.height ? props.height : 856}
-                          className="hidden aspect-[3/2] rounded-lg shadow-2xl ring-2 ring-inset ring-gray-900/10 dark:ring-white/10 md:block "
+                          className={clsx(
+                            props.noRing
+                              ? ''
+                              : 'shadow-2xl ring-2 ring-inset ring-gray-900/10 dark:ring-white/10 ',
+                            props.image ? 'hidden' : '',
+                            'aspect-[3/2] rounded-lg md:block',
+                          )}
                         >
                           <source src={props.video} type="video/mp4" />
                         </video>

@@ -1,7 +1,3 @@
-import Image from 'next/image';
-
-import backgroundImage from '@/images/background-auth.jpg';
-
 // eslint-disable-next-line import/prefer-default-export
 export function SlimLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,14 +7,6 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
           <main className="mx-auto w-full max-w-md sm:px-4 md:w-96 md:max-w-sm md:px-0">
             {children}
           </main>
-        </div>
-        <div className="hidden sm:contents lg:relative lg:block lg:flex-1">
-          <Image
-            className="absolute inset-0 h-full w-full object-cover"
-            src={backgroundImage}
-            alt=""
-            unoptimized
-          />
         </div>
       </div>
     </>

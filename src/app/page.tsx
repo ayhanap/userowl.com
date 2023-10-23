@@ -9,10 +9,8 @@ import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
 import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
-import vd001 from '@/videos/VD-001-encoded-RF22.mp4';
+import vd000 from '@/videos/VD-000-RF38.webm';
+
 import vd002 from '@/videos/VD-002-zoom-encoded-RF26.mp4';
 import vd003 from '@/videos/VD-003-encoded-RF22.mp4';
 import vd004 from '@/videos/VD-004-encoded-RF22.mp4';
@@ -39,6 +37,7 @@ import {
   UserIcon,
   UsersIcon,
 } from '@heroicons/react/20/solid';
+import clsx from 'clsx';
 
 const feedbackWidgetFeatures: Feature[] = [
   {
@@ -211,20 +210,52 @@ export default function Home() {
               to build that your users really need."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
         imageAlt="Image Alt"
-        video={vd001}
+        video={vd000}
         learnMoreText="Learn More"
         learnMoreHref="#feedback-widget"
         isDark={false}
-      />
+        sideBySide={true}
+        noImage={true}
+      >
+        <>
+          <div
+            className={clsx(
+              'mx-auto flex max-w-2xl sm:mt-24 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none',
+              'mt-16 md:mt-24',
+            )}
+          >
+            <div className={clsx('w-full max-w-full lg:w-[45rem] 2xl:w-[55rem]')}>
+              {/* <Image
+                src={screenshotFeedbackView}
+                alt="Alt"
+                className={clsx('aspect-[3/2] rounded-lg md:hidden')}
+              /> */}
+              <video
+                autoPlay
+                loop
+                playsInline
+                muted
+                preload="auto"
+                width={1284}
+                height={856}
+                className={clsx(
+                  // 'hidden',
+                  '-ml-5 aspect-[3/2] rounded-lg md:block lg:-ml-16 xl:-ml-10',
+                )}
+              >
+                <source src={vd000} type="video/webm" />
+              </video>
+            </div>
+          </div>
+        </>
+      </Hero>
       <FeatureMain
         id="feedback-widget"
         ariaLabel="Features for collecting feedback in your application"
         title="Collect Feedback In Your Application"
         description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs
               or feature requests directly from your website or app."
-        image={screenshotFeedbackView}
         imageAlt="Image Alt"
         hashtag="Feedback widget"
         features={feedbackWidgetFeatures}
@@ -236,7 +267,6 @@ export default function Home() {
         title="Resolve Bugs Faster"
         description="Reduce bug resolution times with visual bug reports that include session info, user data and in-depth logs."
         hashtag="Bug tracking"
-        image={screenshotFeedbackView}
         imageAlt="Image Alt"
         video={vd002}
       >
@@ -249,7 +279,6 @@ export default function Home() {
         title="Prioritize changes that matter"
         description="No more guessing what your users want. Hear from them directly, then make the changes they care about."
         hashtag="Product decision"
-        image={screenshot}
         imageAlt="Image Alt"
         imageOnLeft={true}
         video={vd003}
@@ -267,7 +296,6 @@ export default function Home() {
         title="Centralize your feedback management"
         description="Userowl is the only tool you need to manage your feedback. Invite your team, connect your tools, and personalize according to your needs."
         hashtag="One tool"
-        image={screenshotFeedbackViewCondense}
         imageAlt="Image Alt"
         isDark={true}
         video={vd004}

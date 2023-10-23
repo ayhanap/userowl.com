@@ -6,7 +6,7 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
+import mergeFeedback from '@/images/illustrations/merge-feedback.svg';
 
 import vd031 from '@/videos/VD-031-encoded-RF26.mp4';
 import vd032 from '@/videos/VD-032-encoded-RF26.mp4';
@@ -101,7 +101,7 @@ export default function FeatureRequestManagement() {
         title="Merge and Track Similar Requests"
         description="Consolidate similar feature requests into one feedback and individually notify users once the feature is shipped."
         hashtag="Merge"
-        image={screenshotFeedbackViewCondense}
+        svgImage={mergeFeedback}
         imageAlt="Image Alt"
         isDark={false}
       >

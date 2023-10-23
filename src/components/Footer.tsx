@@ -21,9 +21,9 @@ const navigation = {
   ],
   Resources: [
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Help Center', href: 'https://help.userol.com' },
-    { name: 'Documentation', href: 'https://docs.userowl.com' },
+    // { name: 'Blog', href: '/blog' },
+    // { name: 'Help Center', href: 'https://help.userowl.com' },
+    // { name: 'Documentation', href: 'https://docs.userowl.com' },
   ],
   legal: [
     { name: 'Claim', href: '#' },

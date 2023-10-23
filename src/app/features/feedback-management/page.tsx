@@ -6,7 +6,7 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
+import extensionIntegration from '@/images/illustrations/extension-integration.svg';
 
 import vd042 from '@/videos/VD-042-encoded-RF-22.mp4';
 import vd043 from '@/videos/VD-043-encoded-RF22.mp4';
@@ -98,8 +98,9 @@ export default function FeedbackManagement() {
         title="Collect Feedback From Every Channel"
         description="With the help of Userowl browser extension, collect feedback from social channels. Manage everything in one place."
         hashtag="Omnichannel"
-        image={screenshotFeedbackViewCondense}
+        svgImage={extensionIntegration}
         imageAlt="Image Alt"
+        equalSizeImage={true}
         isDark={false}
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />{' '}

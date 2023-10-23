@@ -14,7 +14,7 @@ const nextConfig = {
 
     config.module.rules.push(
       {
-        test: /\.(m4v|mp4)$/i,
+        test: /\.(m4v|mp4|webm)$/i,
         use: [
           {
             loader: 'file-loader',

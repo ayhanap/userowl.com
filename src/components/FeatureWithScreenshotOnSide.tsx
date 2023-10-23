@@ -70,10 +70,7 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
             >
               {props.svgImage ? (
                 <props.svgImage
-                  className={clsx(
-                    props.imageOnLeft ? 'float-right' : '',
-                    'w-[28rem] max-w-full max-w-none xs:w-[36rem]',
-                  )}
+                  className={clsx('w-auto max-w-none xs:max-w-[36rem] md:-ml-4 lg:-ml-0')}
                 />
               ) : (
                 <>
@@ -103,7 +100,8 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
                       className={clsx(
                         props.video ? 'md:block' : '',
                         props.imageOnLeft ? 'float-right' : '',
-                        'hidden aspect-[3/2] w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 dark:ring-white/10 xs:w-[36rem] sm:w-[48rem] md:-ml-4 md:w-[57rem] lg:-ml-0',
+                        props.image ? 'hidden' : '',
+                        'aspect-[3/2] w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 dark:ring-white/10 xs:w-[36rem] sm:w-[48rem] md:-ml-4 md:w-[57rem] lg:ml-0',
                       )}
                     >
                       <source src={props.video} type="video/mp4" />

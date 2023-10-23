@@ -24,7 +24,7 @@ export default function Faqs(props: Props) {
       <div className="relative overflow-hidden bg-white py-20 dark:bg-gray-900 sm:py-32">
         {/* mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 */}
         {/* mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 */}
-        <Container className="relative">
+        <Container className="relative" itemScope itemType="https://schema.org/FAQPage">
           <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
             <h2
               id="faq-title"
@@ -34,7 +34,14 @@ export default function Faqs(props: Props) {
             </h2>
             <dl className="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-white/10">
               {props.faqs.map((faq) => (
-                <Disclosure as="div" key={faq.question} className="pt-6">
+                <Disclosure
+                  as="div"
+                  key={faq.question}
+                  className="pt-6"
+                  itemScope
+                  itemProp="mainEntity"
+                  itemType="https://schema.org/Question"
+                >
                   {({ open }) => (
                     <>
                       <dt>
@@ -48,6 +55,7 @@ export default function Faqs(props: Props) {
                               // open ? 'text-purple-600' : null,
                               'text-base font-semibold leading-7',
                             )}
+                            itemProp="name"
                           >
                             {faq.question}
                           </span>
@@ -95,9 +103,20 @@ export default function Faqs(props: Props) {
                         leave="transition-all duration-200 ease-in-out"
                         leaveFrom="transform max-h-[150px] opacity-100"
                         leaveTo="transform max-h-0 opacity-0"
+                        unmount={false}
                       >
-                        <Disclosure.Panel as="dd" className="mt-2 overflow-hidden pr-1">
-                          <p className="text-base leading-7 text-gray-600 dark:text-gray-300">
+                        <Disclosure.Panel
+                          as="dd"
+                          className="mt-2 overflow-hidden pr-1"
+                          itemScope
+                          itemProp="acceptedAnswer"
+                          itemType="https://schema.org/Answer"
+                          unmount={false}
+                        >
+                          <p
+                            className="text-base leading-7 text-gray-600 dark:text-gray-300"
+                            itemProp="text"
+                          >
                             {faq.answerInHTML ? faq.answerInHTML : faq.answer}
                           </p>
                         </Disclosure.Panel>
