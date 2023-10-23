@@ -9,6 +9,7 @@ import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
 import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
+import vd000hevc from '@/videos/VD-000-1000k0.25.mp4';
 import vd000 from '@/videos/VD-000-RF38.webm';
 
 import vd002 from '@/videos/VD-002-zoom-encoded-RF26.mp4';
@@ -245,6 +246,7 @@ export default function Home() {
                 )}
               >
                 <source src={vd000} type="video/webm" />
+                <source src={vd000hevc} type="video/mp4; codecs=hvc1" />
               </video>
             </div>
           </div>
