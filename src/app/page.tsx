@@ -242,7 +242,7 @@ export default function Home() {
                 height={856}
                 className={clsx(
                   // 'hidden',
-                  '-ml-5 aspect-[3/2] rounded-lg md:block lg:-ml-16 xl:-ml-10',
+                  'relative left-1/2 right-1/2 -ml-[60vw] -mr-[40vw] aspect-[3/2] w-[120%] max-w-none rounded-lg sm:static sm:left-0 sm:right-0 sm:-ml-[10%] sm:mr-0 md:block lg:-ml-[5%] lg:w-full lg:max-w-full',
                 )}
               >
                 <source src={vd000} type="video/webm" />
