@@ -69,7 +69,7 @@ export default function ECommerce() {
         id="feedback-widget"
         ariaLabel="Features for capturing session information"
         title="Simplest Way For Your Customers To Reach You"
-        description="Userowl feedback widget allows your customers to report broken parts directly in your store. Giving an easy way for your customers to report problems improves your overall store experience."
+        description="The Userowl feedback widget allows your customers to report broken parts directly in your store. Giving an easy way for your customers to report problems, improves your overall store experience."
         hashtag="Feedback Widget"
         image={screenshotFeedbackView}
         imageAlt="Image Alt"
@@ -80,8 +80,8 @@ export default function ECommerce() {
         id="one-place"
         ariaLabel="Features to manage all your client work"
         title="One Place To Manage All Your Store Feedback"
-        description="No more bloated inbox with emails from your customers. You can manage, plan and close the feedback loop. Invite your team, modify according to your workflow. Connect with the tools you already use."
-        hashtag="Only tool you need"
+        description="No more bloated inboxes with emails from your customers. You can manage, plan and close the feedback loop. Invite your team, and modify according to your workflow. Connect with the tools you already use."
+        hashtag="The only tool you need"
         image={screenshot}
         imageAlt="Image Alt"
         imageOnLeft={true}
@@ -92,7 +92,7 @@ export default function ECommerce() {
         id="technical-logs"
         ariaLabel="Features for capturing technical logs"
         title="Provide Useful Information To Your Developers"
-        description="Feedback reported via Userowl automatically include session and user details, along with the technical logs that your developers may require for problem reproduction"
+        description="Feedback reported via Userowl automatically includes session and user details, along with the technical logs that your developers may require for problem reproduction"
         hashtag="Session and technical info"
         image={screenshotFeedbackViewCondense}
         imageAlt="Image Alt"

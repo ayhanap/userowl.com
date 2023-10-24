@@ -111,7 +111,7 @@ export default function FeatureRequestManagement() {
         id="integrations"
         ariaLabel="Integration features"
         title="Use Your Existing Tools"
-        description="Userowl integrates with the tools you already use for product management, customer support and communication. "
+        description="Userowl integrates with the tools you already use for product management, customer support, and communication. "
         hashtag="Integrations"
         video={vd035}
         imageAlt="Image Alt"

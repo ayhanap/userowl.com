@@ -68,7 +68,7 @@ export default function Agencies() {
         id="feedback-widget"
         ariaLabel="Features for capturing session information"
         title="Give Power to Your Clients"
-        description="Userowl feedback widget allows your clients or their end-users to send bug reports or feature requests directly in their website. You'll receive beautifully annotated screenshots and all crucial technical information every time. "
+        description="The Userowl feedback widget allows your clients or their end-users to send bug reports or feature requests directly in their website. You'll receive beautifully annotated screenshots and all crucial technical information every time. "
         hashtag="Feedback widget"
         image={screenshotFeedbackView}
         imageAlt="Image Alt"
@@ -79,8 +79,8 @@ export default function Agencies() {
         id="one-place"
         ariaLabel="Features to manage all your client work"
         title="One Place To Manage All Your Client Work"
-        description="No more bloated inbox with emails from your clients. You can create seperate projects and manage all your feedback from your clients in Userowl. You can also invite your clients to view or collaborate, eliminating the need for sending spreadsheets back and forth."
-        hashtag="Only tool you need"
+        description="No more bloated inboxes with emails from your clients. You can create separate projects and manage all your feedback from your clients in Userowl. You can also invite your clients to view or collaborate, eliminating the need for sending spreadsheets back and forth."
+        hashtag="The only tool you need"
         image={screenshot}
         imageAlt="Image Alt"
         imageOnLeft={true}
@@ -91,7 +91,7 @@ export default function Agencies() {
         id="integrations"
         ariaLabel="Annotated screenshot feature"
         title="Integrate Into Your Existing Processes"
-        description="Userowl integrates with the tools you already use for product management, customer support and communication."
+        description="Userowl integrates with the tools you already use for product management, customer support, and communication."
         hashtag="Integrations"
         image={screenshot}
         imageAlt="Image Alt"

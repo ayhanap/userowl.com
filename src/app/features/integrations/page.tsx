@@ -6,8 +6,8 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import zapierIntegration from '@/images/illustrations/zapier-integration.svg';
 import slackDiscordIntegration from '@/images/illustrations/slack-discord-integration.svg';
+import zapierIntegration from '@/images/illustrations/zapier-integration.svg';
 
 import vd051 from '@/videos/VD-051-encoded-RF22.mp4';
 import vd052 from '@/videos/VD-052-encoded-RF22.mp4';
@@ -60,7 +60,7 @@ export default function Integrations() {
     <>
       <Hero
         title="Fits into your team's workflow"
-        description="Userowl integrates with the tools you already use for product management, customer support and communication."
+        description="Userowl integrates with the tools you already use for product management, customer support, and communication."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
         video={vd051}
@@ -72,7 +72,7 @@ export default function Integrations() {
         id="two-way"
         ariaLabel="Features for two-way integrations"
         title="Stay in Sync"
-        description="Sync feedback status and comments between Userowl and your project management tool. Let your feedback's status update when your dev team finishes development."
+        description="Sync feedback status and comments between Userowl and your project management tool. Keep your feedback's status up-to-date as soon as your development team progress through their work."
         hashtag="Two-way integrations"
         video={vd052}
         imageAlt="Image Alt"

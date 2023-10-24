@@ -118,7 +118,7 @@ export default function ProductManagement() {
         id="integrations"
         ariaLabel="Integration features"
         title="Use Your Existing Tools"
-        description="Userowl integrates with the tools you already use for product management, customer support and communication. "
+        description="Userowl integrates with the tools you already use for product management, customer support, and communication. "
         hashtag="Integrations"
         svgImage={integrationLogosAnim}
         imageAlt="Image Alt"

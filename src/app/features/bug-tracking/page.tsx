@@ -60,7 +60,7 @@ export default function BugTracking() {
     <>
       <Hero
         title="Resolve Bugs Faster"
-        description="Reduce bug resolution times with visual bug reports that include session info, user data and in-depth logs."
+        description="Reduce bug resolution times with visual bug reports that include session info, user data, and in-depth logs."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
         video={vd001}
@@ -71,7 +71,7 @@ export default function BugTracking() {
         id="session-info"
         ariaLabel="Features for capturing session information"
         title="Automatically Capture Session Information"
-        description="Each feedback contains session details such as URL, OS, and browser, resolution, location and more."
+        description="Each feedback contains session details such as URL, OS, and browser, resolution, location, and more."
         hashtag="Session info"
         video={vd002}
         imageAlt="Image Alt"
@@ -82,7 +82,7 @@ export default function BugTracking() {
         id="user-info"
         ariaLabel="Features for associating your user information"
         title="Associate Your Customer Info"
-        description="You can identify your users to let feedback to also include essential user details so you can contact them or prioritize feedback accordingly. You can also include any other info related to your business case as custom information."
+        description="You can identify your users to let feedbacks also include essential user details so you can contact them or prioritize feedback accordingly. You can also include any other info related to your business case as custom information."
         hashtag="User information"
         video={vd023}
         imageAlt="Image Alt"
@@ -98,7 +98,7 @@ export default function BugTracking() {
         id="console-logs"
         ariaLabel="Features for capturing console logs"
         title="Don't Lose Crucial Technical Info"
-        description="Console errors and logs automatically captured and included so your developers can reproduce every bug."
+        description="Console errors and logs are automatically captured and included so your developers can reproduce every bug."
         hashtag="Console logs"
         video={vd024}
         imageAlt="Image Alt"

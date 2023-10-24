@@ -7,7 +7,7 @@ const features = [
   {
     name: 'Two-way integrations.',
     description:
-      "Sync feedback status and comments between Userowl and your project management tool. Let your feedback's status update when your dev team finishes development.",
+      "Sync feedback status and comments between Userowl and your project management tool. Keep your feedback's status up-to-date as soon as your development team progress through their work.",
     icon: ArrowsRightLeftIcon,
   },
   {

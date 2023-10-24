@@ -8,8 +8,8 @@ import { InTextLink } from '@/components/InTextLink';
 
 import vd121 from '@/videos/VD-121-encoded-RF26.mp4';
 import vd122 from '@/videos/VD-122-encoded-RF28.mp4';
-import vd124 from '@/videos/VD-124-encoded-RF26.mp4';
 import vd123 from '@/videos/VD-123-encoded-RF28.mp4';
+import vd124 from '@/videos/VD-124-encoded-RF26.mp4';
 
 const faqs: Faq[] = [
   {
@@ -59,7 +59,7 @@ export default function QaUAT() {
     <>
       <Hero
         title="Reporting Issues Have Never Been Easier"
-        description="Userowl feedback widget allows you to report bugs directly in your app without needing any other tools. No more files and folders of endless untitled screenshots and docs. "
+        description="The Userowl feedback widget allows you to report bugs directly in your app without needing any other tools. No more files and folders of endless untitled screenshots and docs. "
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
         noImage={true}
@@ -108,7 +108,7 @@ export default function QaUAT() {
         id="integrations"
         ariaLabel="Annotated screenshot feature"
         title="Stop Switching Tabs To Report Bugs"
-        description="You can send feedback reports directly to your project management tool. You'll no longer waste time managing files to upload and filling in information."
+        description="You can send feedback reports directly to your project management tool. You'll no longer waste time managing files to upload and fill in information."
         hashtag="Integrations"
         video={vd124}
         imageAlt="Image Alt"

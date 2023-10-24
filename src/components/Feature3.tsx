@@ -12,7 +12,7 @@ const features = [
   {
     name: 'Teams.',
     description:
-      'Invite your QA, support, product, dev teams and even your clients. Your team has all the tools to manage and close the feedback loop.',
+      'Invite your QA, support, product, dev teams, and even your clients. Your team has all the tools to manage and close the feedback loop.',
     icon: UserGroupIcon,
   },
   {
@@ -24,7 +24,7 @@ const features = [
   {
     name: 'Omnichannel.',
     description:
-      'With the help of Userowl browser extension, collect feedback from social channels. Manage everything in one place.',
+      'With the help of the Userowl browser extension, collect feedback from social channels. Manage everything in one place.',
     icon: CubeTransparentIcon,
   },
 ];

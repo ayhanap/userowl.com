@@ -26,7 +26,7 @@ const features = [
   },
   {
     name: 'Console Logs.',
-    description: 'Console errors and logs automatically captured and included.',
+    description: 'Console errors and logs are automatically captured and included.',
     icon: CommandLineIcon,
   },
   {
@@ -52,7 +52,7 @@ const Feature1 = (props: Props) => {
               </p>
               <p className="text-text-gray-600 mt-6 text-lg leading-8 dark:text-gray-300">
                 Reduce bug resolution times with visual bug reports that include session info, user
-                data and in-depth logs.
+                data and, in-depth logs.
               </p>
               <p className="mt-6">
                 <Link

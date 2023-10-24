@@ -69,7 +69,7 @@ export default function FeedbackManagement() {
         id="teams"
         ariaLabel="Features for engaging customers"
         title="Collaborate With Your Team"
-        description="Invite your QA, support, product, dev teams and even your clients. Your team has all the tools to manage and close the feedback loop."
+        description="Invite your QA, support, product, dev teams, and even your clients. Your team has all the tools to manage and close the feedback loop."
         hashtag="Teams"
         video={vd042}
         imageAlt="Image Alt"
@@ -96,7 +96,7 @@ export default function FeedbackManagement() {
         id="omnichannel"
         ariaLabel="Features for capturing console logs"
         title="Collect Feedback From Every Channel"
-        description="With the help of Userowl browser extension, collect feedback from social channels. Manage everything in one place."
+        description="With the help of the Userowl browser extension, collect feedback from social channels. Manage everything in one place."
         hashtag="Omnichannel"
         svgImage={extensionIntegration}
         imageAlt="Image Alt"

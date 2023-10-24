@@ -80,12 +80,12 @@ const bugTrackingFeatures: Feature[] = [
   {
     name: 'User Information.',
     description:
-      'You can identify your users to let feedback to also include essential user details so you can contact them or prioritize feedback accordingly.',
+      'You can identify your users to let feedbacks also include essential user details so you can contact them or prioritize feedback accordingly.',
     icon: UserIcon,
   },
   {
     name: 'Console Logs.',
-    description: 'Console errors and logs automatically captured and included.',
+    description: 'Console errors and logs are automatically captured and included.',
     icon: CommandLineIcon,
   },
   {
@@ -121,7 +121,7 @@ const feedbackManagementFeatures: Feature[] = [
   {
     name: 'Teams.',
     description:
-      'Invite your QA, support, product, dev teams and even your clients. Your team has all the tools to manage and close the feedback loop.',
+      'Invite your QA, support, product, dev teams, and even your clients. Your team has all the tools to manage and close the feedback loop.',
     icon: UserGroupIcon,
   },
   {
@@ -133,7 +133,7 @@ const feedbackManagementFeatures: Feature[] = [
   {
     name: 'Omnichannel.',
     description:
-      'With the help of Userowl browser extension, collect feedback from social channels. Manage everything in one place.',
+      'With the help of the Userowl browser extension, collect feedback from social channels. Manage everything in one place.',
     icon: CubeTransparentIcon,
   },
 ];
@@ -142,7 +142,7 @@ const integrationFeatures: Feature[] = [
   {
     name: 'Two-way integrations.',
     description:
-      "Sync feedback status and comments between Userowl and your project management tool. Let your feedback's status update when your dev team finishes development.",
+      "Sync feedback status and comments between Userowl and your project management tool. Keep your feedback's status up-to-date as soon as your development team progress through their work.",
     icon: ArrowsRightLeftIcon,
   },
   {
@@ -206,7 +206,7 @@ export default function Home() {
     <>
       <Hero
         title="Effortless feedback collection, valuable insights"
-        description="Userowl simplifies feature collection and management for you and your users. You have
+        description="Userowl simplifies feedback collection and management for you and your users. You have
               all the data you need to resolve a bug or all the insights to decide the next feature
               to build that your users really need."
         ctaText="Start free trial"
@@ -267,7 +267,7 @@ export default function Home() {
         id="bug-tracking"
         ariaLabel="Features for bug tracking"
         title="Resolve Bugs Faster"
-        description="Reduce bug resolution times with visual bug reports that include session info, user data and in-depth logs."
+        description="Reduce bug resolution times with visual bug reports that include session info, user data, and in-depth logs."
         hashtag="Bug tracking"
         imageAlt="Image Alt"
         video={vd002}
@@ -309,7 +309,7 @@ export default function Home() {
         id="integrations"
         ariaLabel="Integration features"
         title="Fits into your team's workflow"
-        description="Userowl integrates with the tools you already use for product management, customer support and communication."
+        description="Userowl integrates with the tools you already use for product management, customer support, and communication."
         hashtag="Integrations"
         svgImage={integrationLogosAnim}
         imageAlt="Image Alt"
