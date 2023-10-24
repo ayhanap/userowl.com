@@ -3,11 +3,13 @@ import { Lexend } from 'next/font/google';
 import Local from 'next/font/local';
 
 import { Providers } from '@/app/providers';
+import Analytics from '@/components/Analytics';
 import Footer from '@/components/Footer';
 import { Header } from '@/components/Header';
 import '@/styles/tailwind.css';
 import { type Metadata } from 'next';
 import Script from 'next/script';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
+        {/* Google Tag Manager - Global base code */}
         <Script id="userowl-widget" strategy="afterInteractive">
           {`
           //Your APP ID
@@ -82,6 +85,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
       </head>
       <body className="">
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <Providers>
           {/* <div className="flex w-full">
             <Layout>{children}</Layout>

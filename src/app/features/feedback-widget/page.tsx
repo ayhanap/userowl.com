@@ -61,7 +61,7 @@ export default function FeedbackWidget() {
     <>
       <Hero
         title="Collect Feedback In Your Application"
-        description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs or feature requests directly from your website or app."
+        description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs, or feature requests directly from your website or app."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
         // image={screenshotFeedbackView}
