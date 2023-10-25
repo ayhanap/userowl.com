@@ -151,7 +151,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+      className="h-3.5 w-3.5 overflow-visible stroke-slate-700 dark:stroke-white"
       fill="none"
       strokeWidth={2}
       strokeLinecap="round"
@@ -268,7 +268,7 @@ export const Header = (props: Props) => {
                 >
                   <svg
                     aria-hidden="true"
-                    className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+                    className="h-3.5 w-3.5 overflow-visible stroke-slate-700 dark:stroke-white"
                     fill="none"
                     strokeWidth={2}
                     strokeLinecap="round"
