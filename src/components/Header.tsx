@@ -226,7 +226,7 @@ export const Header = (props: Props) => {
     <header
       className={clsx(props.isDark ? 'dark' : null, 'inset-x-0 flex items-center justify-between')}
     >
-      <div className="flex-1 bg-white py-10 dark:bg-gray-900">
+      <div className="flex-1 bg-white pt-10 dark:bg-gray-900">
         <Container>
           <nav className="relative z-30 flex items-center justify-between">
             <div className="flex items-center md:gap-x-12">

@@ -12,6 +12,11 @@ import vd011 from '@/videos/VD-011-cropped-encoded-RF26.mp4';
 import vd013 from '@/videos/VD-013-encoded-RF26.mp4';
 import vd014 from '@/videos/VD-014-encoded-RF26.mp4';
 import vd015 from '@/videos/VD-015-encoded-RF28.mp4';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Feedback Widget',
+};
 
 const faqs: Faq[] = [
   {

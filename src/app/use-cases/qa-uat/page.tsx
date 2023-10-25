@@ -11,6 +11,12 @@ import vd122 from '@/videos/VD-122-encoded-RF28.mp4';
 import vd123 from '@/videos/VD-123-encoded-RF28.mp4';
 import vd124 from '@/videos/VD-124-encoded-RF26.mp4';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'QA, UAT Use Case',
+};
+
 const faqs: Faq[] = [
   {
     question: 'How does Userowl work?',

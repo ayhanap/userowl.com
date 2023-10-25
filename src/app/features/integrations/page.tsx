@@ -11,6 +11,11 @@ import zapierIntegration from '@/images/illustrations/zapier-integration.svg';
 
 import vd051 from '@/videos/VD-051-encoded-RF22.mp4';
 import vd052 from '@/videos/VD-052-encoded-RF22.mp4';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Integrations',
+};
 
 const faqs: Faq[] = [
   {

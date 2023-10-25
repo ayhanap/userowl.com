@@ -11,6 +11,11 @@ import vd002 from '@/videos/VD-002-encoded-RF26.mp4';
 import vd013 from '@/videos/VD-013-encoded-RF26.mp4';
 import vd023 from '@/videos/VD-023-encoded-RF26.mp4';
 import vd024 from '@/videos/VD-024-encoded-RF26.mp4';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Bug Tracking',
+};
 
 const faqs: Faq[] = [
   {

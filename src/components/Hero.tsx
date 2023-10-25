@@ -28,10 +28,10 @@ const Hero = (props: Props) => {
   return (
     <div className={clsx(props.isDark ? 'dark' : null)}>
       <div className="overflow-hidden bg-white  dark:bg-gray-900">
-        <div className="py-24 sm:py-32 lg:pb-40">
+        <div className="py-24 sm:py-32">
           <div
             className={clsx(
-              props.sideBySide ? 'items-center pt-10 lg:flex' : '',
+              props.sideBySide ? 'items-center lg:flex' : '',
               'mx-auto max-w-7xl px-6 lg:px-8',
             )}
           >

@@ -10,6 +10,11 @@ import extensionIntegration from '@/images/illustrations/extension-integration.s
 
 import vd042 from '@/videos/VD-042-encoded-RF-22.mp4';
 import vd043 from '@/videos/VD-043-encoded-RF22.mp4';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Feedback Management',
+};
 
 const faqs: Faq[] = [
   {

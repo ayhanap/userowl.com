@@ -11,6 +11,11 @@ import mergeFeedback from '@/images/illustrations/merge-feedback.svg';
 import vd031 from '@/videos/VD-031-encoded-RF26.mp4';
 import vd032 from '@/videos/VD-032-encoded-RF26.mp4';
 import vd033 from '@/videos/VD-033-encoded-RF26.mp4';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Product Management Use Case',
+};
 
 const faqs: Faq[] = [
   {

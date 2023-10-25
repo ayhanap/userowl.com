@@ -9,6 +9,11 @@ import { InTextLink } from '@/components/InTextLink';
 import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
 import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
 import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'E-Commerce Use Case',
+};
 
 const faqs: Faq[] = [
   {

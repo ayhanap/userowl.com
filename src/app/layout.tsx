@@ -12,8 +12,9 @@ import Script from 'next/script';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://userowl.com'),
   title: {
-    template: '%s - Userowl',
+    template: '%s | Userowl',
     default: 'Userowl - Visual Feedback Management Software',
   },
   description:
@@ -26,6 +27,15 @@ export const metadata: Metadata = {
     siteId: '1564720076489629696',
     creator: '@userowl_com',
     creatorId: '1564720076489629696',
+  },
+  openGraph: {
+    title: 'Userowl | Visual Feedback Management Software',
+    description:
+      'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects',
+    url: 'https://userowl.com',
+    siteName: 'Userowl',
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
