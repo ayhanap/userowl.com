@@ -100,9 +100,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Analytics />
         </Suspense>
         <Providers>
-          {/* <div className="flex w-full">
-            <Layout>{children}</Layout>
-          </div> */}
           <Header isDark={false} />
           <main>{children}</main>
           <Footer isDark={false} />

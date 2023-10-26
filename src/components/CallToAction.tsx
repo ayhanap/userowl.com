@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { FadeIn } from '@/components/FadeIn';
 
 // eslint-disable-next-line import/prefer-default-export
 export function CallToAction() {
@@ -18,7 +19,7 @@ export function CallToAction() {
         unoptimized
       /> */}
       <Container className="relative">
-        <div className="mx-auto max-w-lg text-center">
+        <FadeIn className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Get started today
           </h2>
@@ -28,7 +29,7 @@ export function CallToAction() {
           <Button href="https://app.userowl.com/signup" color="white" className="mt-10">
             Start 14 day trial
           </Button>
-        </div>
+        </FadeIn>
       </Container>
     </section>
   );

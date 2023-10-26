@@ -1,3 +1,4 @@
+import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { Feature } from '@/types/feature';
 import clsx from 'clsx';
 
@@ -29,7 +30,7 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
       className={clsx(props.isDark ? 'dark' : null)}
     >
       <div className="overflow-hidden bg-white py-24 dark:bg-gray-900 sm:py-32">
-        <div
+        <FadeInStagger
           className={clsx(
             props.equalSizeImage ? 'equal' : 'big',
             'group mx-auto max-w-7xl px-6 lg:px-8',
@@ -44,7 +45,7 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
               'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-3xl xl:mx-0 xl:max-w-none',
             )}
           >
-            <div
+            <FadeIn
               className={clsx(props.imageOnLeft ? 'xl:ml-auto  xl:pl-8' : 'xl:pr-8 ', 'xl:pt-4')}
             >
               <div className="group-[.equal]:max-w-auto group-[.big]:xl:w-[28rem] group-[.equal]:xl:w-auto group-[.big]:xl:max-w-md group-[.big]:2xl:w-[32rem] group-[.big]:2xl:max-w-lg">
@@ -59,8 +60,8 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
                 </p>
                 {props.children}
               </div>
-            </div>
-            <div
+            </FadeIn>
+            <FadeIn
               className={clsx(
                 props.imageOnLeft
                   ? 'group-[.big]:xl:order-first group-[.equal]:xl:order-first'
@@ -109,9 +110,9 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
                   ) : null}
                 </>
               )}
-            </div>
+            </FadeIn>
           </div>
-        </div>
+        </FadeInStagger>
       </div>
     </section>
   );
@@ -122,9 +123,18 @@ export const LearnMoreLink = ({ href, text }: { href: string; text?: string }) =
     <p className="mt-6">
       <Link
         href={href}
-        className="text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+        className={clsx(
+          'group/link relative text-sm font-semibold leading-6 text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300',
+          "after:pointer-events-none after:absolute after:-bottom-[0.25rem] after:left-0 after:h-[2px] after:w-[calc(100%_-_1em)] after:origin-top-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-[ease] after:content-[''] hover:after:scale-x-100",
+        )}
       >
-        {text || 'Learn more'} <span aria-hidden="true">→</span>
+        {text || 'Learn more'}{' '}
+        <span
+          // className="ml-0 transition-[margin] duration-300 ease-[ease] group-hover/link:ml-1"
+          aria-hidden="true"
+        >
+          →
+        </span>
       </Link>
     </p>
   );
@@ -132,20 +142,22 @@ export const LearnMoreLink = ({ href, text }: { href: string; text?: string }) =
 
 export const FeatureList = ({ features }: { features: Feature[] }) => {
   return (
-    <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300 lg:max-w-none">
-      {features.map((feature) => (
-        <div key={feature.name} className="relative pl-9">
-          <dt className="inline font-semibold text-gray-900 dark:text-white">
-            <feature.icon
-              className="absolute left-1 top-1 h-5 w-5 text-indigo-600 dark:text-indigo-500"
-              aria-hidden="true"
-            />
-            {feature.name}
-          </dt>{' '}
-          <dd className="inline">{feature.description}</dd>
-        </div>
-      ))}
-    </dl>
+    <FadeInStagger>
+      <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 dark:text-gray-300 lg:max-w-none">
+        {features.map((feature) => (
+          <FadeIn key={feature.name} className="relative pl-9">
+            <dt className="inline font-semibold text-gray-900 dark:text-white">
+              <feature.icon
+                className="absolute left-1 top-1 h-5 w-5 text-indigo-600 dark:text-indigo-500"
+                aria-hidden="true"
+              />
+              {feature.name}
+            </dt>{' '}
+            <dd className="inline">{feature.description}</dd>
+          </FadeIn>
+        ))}
+      </dl>
+    </FadeInStagger>
   );
 };
 
