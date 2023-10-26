@@ -43,6 +43,7 @@ const inter = Local({
   src: './Inter-roman.var.woff2',
   display: 'swap',
   variable: '--font-inter',
+  weight: '100 900',
 });
 
 const lexend = Lexend({

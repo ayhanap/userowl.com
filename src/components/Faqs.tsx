@@ -99,9 +99,9 @@ export default function Faqs(props: Props) {
                         as={Fragment}
                         enter="transition-all duration-300 ease-in-out"
                         enterFrom="transform max-h-0 opacity-0"
-                        enterTo="transform max-h-[150px] opacity-100"
+                        enterTo="transform max-h-[200px] opacity-100"
                         leave="transition-all duration-200 ease-in-out"
-                        leaveFrom="transform max-h-[150px] opacity-100"
+                        leaveFrom="transform max-h-[200px] opacity-100"
                         leaveTo="transform max-h-0 opacity-0"
                         unmount={false}
                       >

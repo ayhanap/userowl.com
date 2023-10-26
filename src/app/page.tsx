@@ -9,8 +9,9 @@ import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
 import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
-import vd000hevc from '@/videos/VD-000-1000k0.25.mp4';
+import vd000hevc from '@/videos/VD-000-30fps-hevc-safari.mp4';
 import vd000 from '@/videos/VD-000-RF38.webm';
+import vd000_poster from '@/videos/VD-000-poster.png';
 
 import vd002 from '@/videos/VD-002-zoom-encoded-RF26.mp4';
 import vd003 from '@/videos/VD-003-encoded-RF22.mp4';
@@ -244,9 +245,10 @@ export default function Home() {
                   // 'hidden',
                   'relative left-1/2 right-1/2 -ml-[60vw] -mr-[40vw] aspect-[3/2] w-[120%] max-w-none rounded-lg sm:static sm:left-0 sm:right-0 sm:-ml-[10%] sm:mr-0 md:block lg:-ml-[5%] lg:w-full lg:max-w-full',
                 )}
+                poster={vd000_poster.src}
               >
-                <source src={vd000} type="video/webm" />
                 <source src={vd000hevc} type="video/mp4; codecs=hvc1" />
+                <source src={vd000} type="video/webm" />
               </video>
             </div>
           </div>
