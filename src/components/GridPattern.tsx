@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable import/prefer-default-export */
 
 'use client';
@@ -48,7 +49,7 @@ export function GridPattern({
 
   useEffect(() => {
     if (!interactive) {
-      return;
+      return undefined;
     }
 
     function onMouseMove(event: MouseEvent) {
@@ -78,9 +79,7 @@ export function GridPattern({
       setHoveredBlocks((blocks) => {
         const key = counter.current++;
         const block = [x, y, key] as (typeof hoveredBlocks)[number];
-        return [...blocks, block].filter(
-          (block) => !(block[0] === x && block[1] === y && block[2] !== key),
-        );
+        return [...blocks, block].filter((b) => !(b[0] === x && b[1] === y && b[2] !== key));
       });
     }
 
