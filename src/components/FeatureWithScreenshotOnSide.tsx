@@ -30,7 +30,7 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
       className={clsx(props.isDark ? 'dark' : null)}
     >
       <div className="overflow-hidden bg-white py-24 dark:bg-gray-900 sm:py-32">
-        <FadeInStagger
+        <div
           className={clsx(
             props.equalSizeImage ? 'equal' : 'big',
             'group mx-auto max-w-7xl px-6 lg:px-8',
@@ -47,6 +47,8 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
           >
             <FadeIn
               className={clsx(props.imageOnLeft ? 'xl:ml-auto  xl:pl-8' : 'xl:pr-8 ', 'xl:pt-4')}
+              fromLeft={!props.imageOnLeft}
+              fromRight={props.imageOnLeft}
             >
               <div className="group-[.equal]:max-w-auto group-[.big]:xl:w-[28rem] group-[.equal]:xl:w-auto group-[.big]:xl:max-w-md group-[.big]:2xl:w-[32rem] group-[.big]:2xl:max-w-lg">
                 <h2 className="text-base font-semibold leading-7 text-indigo-600 dark:text-indigo-400">
@@ -62,6 +64,8 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
               </div>
             </FadeIn>
             <FadeIn
+              fromLeft={props.imageOnLeft}
+              fromRight={!props.imageOnLeft}
               className={clsx(
                 props.imageOnLeft
                   ? 'group-[.big]:xl:order-first group-[.equal]:xl:order-first'
@@ -112,7 +116,7 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
               )}
             </FadeIn>
           </div>
-        </FadeInStagger>
+        </div>
       </div>
     </section>
   );
