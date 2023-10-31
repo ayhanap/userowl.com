@@ -26,7 +26,7 @@ export default function Faqs(props: Props) {
         {/* mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40 */}
         {/* mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 */}
         <Container className="relative" itemScope itemType="https://schema.org/FAQPage">
-          <FadeInStagger className="mx-auto max-w-4xl divide-y divide-gray-900/10">
+          <FadeInStagger faster className="mx-auto max-w-4xl divide-y divide-gray-900/10">
             <FadeIn>
               <h2
                 id="faq-title"
@@ -38,16 +38,15 @@ export default function Faqs(props: Props) {
             <dl className="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-white/10">
               {props.faqs.map((faq) => (
                 <FadeIn key={faq.question}>
-                  <Disclosure
-                    as="div"
-                    className="pt-6"
-                    itemScope
-                    itemProp="mainEntity"
-                    itemType="https://schema.org/Question"
-                  >
+                  <Disclosure as={Fragment}>
                     {({ open }) => (
                       <>
-                        <dt>
+                        <dt
+                          className="pt-6"
+                          itemScope
+                          itemProp="mainEntity"
+                          itemType="https://schema.org/Question"
+                        >
                           <Disclosure.Button
                             className="flex w-full items-start justify-between text-left 
                       text-gray-900 transition-colors duration-300 aria-expanded:text-purple-600 

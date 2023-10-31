@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     default: 'Userowl - Visual Feedback Management Software',
   },
   description:
-    'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects',
+    'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects.',
   twitter: {
     card: 'summary_large_image',
     title: 'Userowl | Visual Feedback Management Software',
     description:
-      'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects',
+      'Collect feedback and bug reports directly within your application. Prioritize features based on user needs, reproduce and fix bugs or get feedback about your site. Utilize it on your live site, with your QA team, or for your client projects.',
     siteId: '1564720076489629696',
     creator: '@userowl_com',
     creatorId: '1564720076489629696',

@@ -20,6 +20,7 @@ type Props = {
   isDark?: boolean;
   displayRing?: boolean;
   equalSizeImage?: boolean;
+  hasSubFeatures?: boolean;
 };
 
 const FeatureWithScreenshotOnSide = (props: Props) => {
@@ -42,11 +43,14 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
               props.imageOnLeft
                 ? 'group-[.big]:xl:grid-cols-[minmax(0,_2fr)_minmax(max-content,_1fr)] group-[.equal]:xl:grid-cols-2 2xl:grid-cols-2'
                 : 'group-[.big]:xl:grid-cols-[minmax(max-content,_1fr)_minmax(0,_2fr)] group-[.equal]:xl:grid-cols-2 2xl:grid-cols-2',
-              'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-3xl xl:mx-0 xl:max-w-none',
+              'mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 sm:gap-y-20 lg:max-w-3xl xl:mx-0 xl:max-w-none',
             )}
           >
             <FadeIn
-              className={clsx(props.imageOnLeft ? 'xl:ml-auto  xl:pl-8' : 'xl:pr-8 ', 'xl:pt-4')}
+              className={clsx(
+                props.imageOnLeft ? 'xl:ml-auto  xl:pl-8' : 'xl:pr-8 ',
+                props.hasSubFeatures ? 'xl:pt-4' : 'xl:-mt-[1.75rem]',
+              )}
               fromLeft={!props.imageOnLeft}
               fromRight={props.imageOnLeft}
             >
@@ -67,15 +71,17 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
               fromLeft={props.imageOnLeft}
               fromRight={!props.imageOnLeft}
               className={clsx(
-                props.imageOnLeft
-                  ? 'group-[.big]:xl:order-first group-[.equal]:xl:order-first'
-                  : null,
-                '',
+                props.imageOnLeft ? 'xl:order-first' : null,
+                props.imageOnLeft && !props.svgImage ? 'xl:justify-end' : null,
+                'xl:grid xl:items-center ',
               )}
             >
               {props.svgImage ? (
                 <props.svgImage
-                  className={clsx('w-auto max-w-none xs:max-w-[36rem] md:-ml-4 lg:-ml-0')}
+                  className={clsx(
+                    props.imageOnLeft ? 'xl:ml-auto' : null,
+                    'w-auto max-w-none xs:max-w-[36rem] md:-ml-4 lg:-ml-0',
+                  )}
                 />
               ) : (
                 <>

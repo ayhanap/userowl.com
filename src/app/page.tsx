@@ -183,8 +183,7 @@ const faqs: Faq[] = [
         Yes, after you complete your{' '}
         <InTextLink href="https://app.userowl.com/signup">sign up</InTextLink>, you can invite your
         members. You can also invite your clients so they can join conversation on feedbacks they
-        sent. Learn more about teams{' '}
-        <InTextLink href="/features/feedback-management">here</InTextLink>.
+        sent. <InTextLink href="/features/feedback-management">Learn more about teams</InTextLink>.
       </>
     ),
   },
@@ -195,8 +194,8 @@ const faqs: Faq[] = [
         You can reply to your customers in feedback view to clearify their feedback or once you
         resolved their issue. They will recieve your reply as an email. You can even have an email
         address field at your feedback form so visitors that are not your users can also leave their
-        email. Learn more about closing the feedback loop{' '}
-        <InTextLink href="/features/feedback-management">here</InTextLink>.
+        email. Learn more about{' '}
+        <InTextLink href="/features/feedback-management">closing the feedback loop</InTextLink>.
       </>
     ),
   },
@@ -273,6 +272,7 @@ export default function Home() {
         hashtag="Bug tracking"
         imageAlt="Image Alt"
         video={vd002}
+        hasSubFeatures={true}
       >
         <LearnMoreLink href="/features/bug-tracking" />
         <FeatureList features={bugTrackingFeatures} />
@@ -286,6 +286,7 @@ export default function Home() {
         imageAlt="Image Alt"
         imageOnLeft={true}
         video={vd003}
+        hasSubFeatures={true}
       >
         <LearnMoreLink href="/features/feature-request-management" />
         <FeatureList features={featureRequestManagementFeatures} />
@@ -303,6 +304,7 @@ export default function Home() {
         imageAlt="Image Alt"
         isDark={true}
         video={vd004}
+        hasSubFeatures={true}
       >
         <LearnMoreLink href="/features/feedback-management" />
         <FeatureList features={feedbackManagementFeatures} />
@@ -318,6 +320,7 @@ export default function Home() {
         imageOnLeft={true}
         isDark={true}
         equalSizeImage={true}
+        hasSubFeatures={true}
       >
         <LearnMoreLink href="/features/integrations" />
         <FeatureList features={integrationFeatures} />

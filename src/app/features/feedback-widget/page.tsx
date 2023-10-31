@@ -42,8 +42,7 @@ const faqs: Faq[] = [
         Yes, after you complete your{' '}
         <InTextLink href="https://app.userowl.com/signup">sign up</InTextLink>, you can invite your
         members. You can also invite your clients so they can join conversation on feedbacks they
-        sent. Learn more about teams{' '}
-        <InTextLink href="/features/feedback-management">here</InTextLink>.
+        sent. <InTextLink href="/features/feedback-management">Learn more about teams</InTextLink>.
       </>
     ),
   },
@@ -54,8 +53,8 @@ const faqs: Faq[] = [
         You can reply to your customers in feedback view to clearify their feedback or once you
         resolved their issue. They will recieve your reply as an email. You can even have an email
         address field at your feedback form so visitors that are not your users can also leave their
-        email. Learn more about closing the feedback loop{' '}
-        <InTextLink href="/features/feedback-management">here</InTextLink>.
+        email. Learn more about{' '}
+        <InTextLink href="/features/feedback-management">closing the feedback loop</InTextLink>.
       </>
     ),
   },
@@ -64,6 +63,20 @@ const faqs: Faq[] = [
 export default function FeedbackWidget() {
   return (
     <>
+      {/* <BreadcrumbJsonLd
+        useAppDir={true}
+        itemListElements={[
+          {
+            position: 1,
+            name: 'Features',
+            item: 'https://userowl.com/features',
+          },
+          {
+            position: 2,
+            name: 'Feedback Widget',
+          },
+        ]}
+      /> */}
       <Hero
         title="Collect Feedback In Your Application"
         description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs, or feature requests directly from your website or app."
