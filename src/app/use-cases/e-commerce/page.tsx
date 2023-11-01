@@ -6,9 +6,8 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshotFeedbackViewCondense from '@/images/screenshots/app.userowl.com_feedbacks.png';
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import screenshot from '@/images/screenshots/SC-001_Installation@3x.png';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -65,7 +64,7 @@ export default function ECommerce() {
         description="Angry or confused customers will make you lose sales. Get visual insights directly from your customers to improve their online shopping experience."
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
+        image={screenshot}
         imageAlt="Image Alt"
         isDark={false}
       />
@@ -75,7 +74,7 @@ export default function ECommerce() {
         title="Simplest Way For Your Customers To Reach You"
         description="The Userowl feedback widget allows your customers to report broken parts directly in your store. Giving an easy way for your customers to report problems, improves your overall store experience."
         hashtag="Feedback Widget"
-        image={screenshotFeedbackView}
+        image={screenshot}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
@@ -98,7 +97,7 @@ export default function ECommerce() {
         title="Provide Useful Information To Your Developers"
         description="Feedback reported via Userowl automatically includes session and user details, along with the technical logs that your developers may require for problem reproduction"
         hashtag="Session and technical info"
-        image={screenshotFeedbackViewCondense}
+        image={screenshot}
         imageAlt="Image Alt"
         isDark={true}
       >

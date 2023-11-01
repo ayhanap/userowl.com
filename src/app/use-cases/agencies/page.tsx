@@ -6,8 +6,7 @@ import FeatureWithScreenshotOnSide, {
 import Hero from '@/components/Hero';
 import { InTextLink } from '@/components/InTextLink';
 
-import screenshot from '@/images/screenshots/app.userowl.com_feedbacks_64ea2cb7472b5a16a6c35415(1920X1080@4x).png';
-import screenshotFeedbackView from '@/images/screenshots/screenshot-feedback-view.png';
+import screenshot from '@/images/screenshots/SC-001_Installation@3x.png';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -64,7 +63,7 @@ export default function Agencies() {
         description="Simplify and automate feedback collection and management with your clients and end users"
         ctaText="Start free trial"
         ctaHref="https://app.userowl.com/signup"
-        image={screenshotFeedbackView}
+        image={screenshot}
         imageAlt="Image Alt"
         isDark={false}
       />
@@ -74,7 +73,7 @@ export default function Agencies() {
         title="Give Power to Your Clients"
         description="The Userowl feedback widget allows your clients or their end-users to send bug reports or feature requests directly in their website. You'll receive beautifully annotated screenshots and all crucial technical information every time. "
         hashtag="Feedback widget"
-        image={screenshotFeedbackView}
+        image={screenshot}
         imageAlt="Image Alt"
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
