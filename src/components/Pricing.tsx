@@ -343,13 +343,13 @@ export function Pricing() {
                     'Each feedback contains session details such as URL, OS, and browser, resolution, location, and more.',
                 },
                 {
-                  name: 'Workflow Customization',
-                  description: 'Customize your feedback workflow, aligning it with your team.',
-                },
-                {
                   name: 'Console Logs',
                   description:
                     'Browser console errors and logs are automatically captured and included in every feedback.',
+                },
+                {
+                  name: 'Workflow Customization',
+                  description: 'Customize your feedback workflow, aligning it with your team.',
                 },
                 {
                   name: 'One Integration',
