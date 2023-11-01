@@ -93,10 +93,6 @@ export default function QaUAT() {
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
       </FeatureWithScreenshotOnSide>
-      {/* <div className="dark">
-          <Feature1 />
-        </div> */}
-      {/* <Feature2 /> */}
       <FeatureWithScreenshotOnSide
         id="uat"
         ariaLabel="Features for capturing console logs"

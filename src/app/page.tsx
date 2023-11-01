@@ -291,10 +291,6 @@ export default function Home() {
         <LearnMoreLink href="/features/feature-request-management" />
         <FeatureList features={featureRequestManagementFeatures} />
       </FeatureWithScreenshotOnSide>
-      {/* <div className="dark">
-          <Feature1 />
-        </div> */}
-      {/* <Feature2 /> */}
       <FeatureWithScreenshotOnSide
         id="feedback-management"
         ariaLabel="Features for feedback management"

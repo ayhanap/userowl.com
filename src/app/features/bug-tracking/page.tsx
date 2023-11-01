@@ -94,10 +94,6 @@ export default function BugTracking() {
       >
         <LearnMoreLink text={'Start free trial'} href="https://app.userowl.com/signup" />
       </FeatureWithScreenshotOnSide>
-      {/* <div className="dark">
-          <Feature1 />
-        </div> */}
-      {/* <Feature2 /> */}
       <FeatureWithScreenshotOnSide
         id="console-logs"
         ariaLabel="Features for capturing console logs"
