@@ -68,12 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.8,
     },
-    // {
-    //   url: 'https://userowl.com/pricing',
-    //   lastModified: new Date(),
-    //   changeFrequency: 'daily',
-    //   priority: 0.7,
-    // },
+    {
+      url: 'https://userowl.com/pricing',
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
     // {
     //   url: 'https://userowl.com/blog',
     //   lastModified: new Date(),
