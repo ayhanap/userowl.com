@@ -37,16 +37,16 @@ export default function Faqs(props: Props) {
             </FadeIn>
             <dl className="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-white/10">
               {props.faqs.map((faq) => (
-                <FadeIn key={faq.question}>
+                <FadeIn
+                  key={faq.question}
+                  itemScope
+                  itemProp="mainEntity"
+                  itemType="https://schema.org/Question"
+                >
                   <Disclosure as={Fragment}>
                     {({ open }) => (
                       <>
-                        <dt
-                          className="pt-6"
-                          itemScope
-                          itemProp="mainEntity"
-                          itemType="https://schema.org/Question"
-                        >
+                        <dt className="pt-6">
                           <Disclosure.Button
                             className="flex w-full items-start justify-between text-left 
                       text-gray-900 transition-colors duration-300 aria-expanded:text-purple-600 
