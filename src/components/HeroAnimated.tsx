@@ -1,5 +1,9 @@
+'use client';
+
 import { Button } from '@/components/Button';
+import { FadeIn, FadeInStagger } from '@/components/FadeIn';
 import { LearnMoreLink } from '@/components/FeatureWithScreenshotOnSide';
+import useCheckMobileScreen from '@/util/useCheckMobileScreen';
 import clsx from 'clsx';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image, { StaticImageData } from 'next/image';
@@ -25,18 +29,33 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const Hero = (props: Props) => {
+const HeroAnimated = (props: Props) => {
+  const isMobile = useCheckMobileScreen();
+
+  const mobileTransition = { duration: 0 };
   return (
     <div className={clsx(props.isDark ? 'dark' : null)}>
       <div className="overflow-hidden bg-white  dark:bg-gray-900">
-        <div className="py-24 sm:py-32">
+        <FadeInStagger
+          // transition={isMobile ? { staggerChildren: 0 } : undefined}
+          className="py-24 sm:py-32"
+          faster
+        >
           <div
             className={clsx(
               props.sideBySide ? 'items-center lg:flex' : '',
               'mx-auto max-w-7xl px-6 lg:px-8',
             )}
           >
-            <div
+            <FadeIn
+              {...(isMobile
+                ? {
+                    transition: { duration: 0 },
+                    variants: {
+                      hidden: { opacity: 1 },
+                    },
+                  }
+                : {})}
               className={clsx(
                 props.sideBySide
                   ? 'max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0 lg:pt-8 xl:max-w-xl'
@@ -50,7 +69,15 @@ const Hero = (props: Props) => {
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                 {props.description}
               </p>
-              <div
+              <FadeIn
+                {...(isMobile
+                  ? {
+                      transition: { duration: 0 },
+                      variants: {
+                        hidden: { opacity: 1 },
+                      },
+                    }
+                  : {})}
                 className={clsx(
                   props.sideBySide ? '' : 'justify-center',
                   'items-top mt-10 flex gap-x-6',
@@ -86,9 +113,18 @@ const Hero = (props: Props) => {
                    
                   </a>
                 ) : null} */}
-              </div>
-            </div>
-            <div>
+              </FadeIn>
+            </FadeIn>
+            <FadeIn
+              {...(isMobile
+                ? {
+                    transition: { duration: 0 },
+                    variants: {
+                      hidden: { opacity: 1 },
+                    },
+                  }
+                : {})}
+            >
               {props.children ? props.children : null}
               {props.noImage ? null : (
                 <div
@@ -153,12 +189,12 @@ const Hero = (props: Props) => {
                   </div>
                 </div>
               )}
-            </div>
+            </FadeIn>
           </div>
-        </div>
+        </FadeInStagger>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default HeroAnimated;

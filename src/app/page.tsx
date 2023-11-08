@@ -40,6 +40,7 @@ import {
   UsersIcon,
 } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
+import { Suspense } from 'react';
 
 const feedbackWidgetFeatures: Feature[] = [
   {
@@ -201,7 +202,7 @@ const faqs: Faq[] = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Hero
@@ -253,85 +254,87 @@ export default function Home() {
           </div>
         </>
       </Hero>
-      <FeatureMain
-        id="feedback-widget"
-        ariaLabel="Features for collecting feedback in your application"
-        title="Collect Feedback In Your Application"
-        description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs
+      <Suspense>
+        <FeatureMain
+          id="feedback-widget"
+          ariaLabel="Features for collecting feedback in your application"
+          title="Collect Feedback In Your Application"
+          description="With the help of the powerful feedback widget, Userowl lets you collect feedback, bugs
               or feature requests directly from your website or app."
-        imageAlt="Image Alt"
-        hashtag="Feedback widget"
-        features={feedbackWidgetFeatures}
-        isDark={false}
-      />
-      <FeatureWithScreenshotOnSide
-        id="bug-tracking"
-        ariaLabel="Features for bug tracking"
-        title="Resolve Bugs Faster"
-        description="Reduce bug resolution times with visual bug reports that include session info, user data, and in-depth logs."
-        hashtag="Bug tracking"
-        imageAlt="Image Alt"
-        video={vd002}
-        hasSubFeatures={true}
-      >
-        <LearnMoreLink href="/features/bug-tracking" text="Discover bug tracking" />
-        <FeatureList features={bugTrackingFeatures} />
-      </FeatureWithScreenshotOnSide>
-      <FeatureWithScreenshotOnSide
-        id="feature-request-management"
-        ariaLabel="Features for feature request management"
-        title="Prioritize changes that matter"
-        description="No more guessing what your users want. Hear from them directly, then make the changes they care about."
-        hashtag="Product decision"
-        imageAlt="Image Alt"
-        imageOnLeft={true}
-        video={vd003}
-        hasSubFeatures={true}
-      >
-        <LearnMoreLink
-          href="/features/feature-request-management"
-          text="Discover product decision"
+          imageAlt="Image Alt"
+          hashtag="Feedback widget"
+          features={feedbackWidgetFeatures}
+          isDark={false}
         />
-        <FeatureList features={featureRequestManagementFeatures} />
-      </FeatureWithScreenshotOnSide>
-      <FeatureWithScreenshotOnSide
-        id="feedback-management"
-        ariaLabel="Features for feedback management"
-        title="Centralize your feedback management"
-        description="Userowl is the only tool you need to manage your feedback. Invite your team, connect your tools, and personalize according to your needs."
-        hashtag="One tool"
-        imageAlt="Image Alt"
-        isDark={true}
-        video={vd004}
-        hasSubFeatures={true}
-      >
-        <LearnMoreLink href="/features/feedback-management" text="Discover feedback management" />
-        <FeatureList features={feedbackManagementFeatures} />
-      </FeatureWithScreenshotOnSide>
-      <FeatureWithScreenshotOnSide
-        id="integrations"
-        ariaLabel="Integration features"
-        title="Fits into your team's workflow"
-        description="Userowl integrates with the tools you already use for product management, customer support, and communication."
-        hashtag="Integrations"
-        svgImage={integrationLogosAnim}
-        imageAlt="Image Alt"
-        imageOnLeft={true}
-        isDark={true}
-        equalSizeImage={true}
-        hasSubFeatures={true}
-      >
-        <LearnMoreLink href="/features/integrations" text="Discover integrations" />
-        <FeatureList features={integrationFeatures} />
-      </FeatureWithScreenshotOnSide>
-      {/* <Feature3 /> */}
-      {/* <Feature4 /> */}
-      {/* <PrimaryFeatures />
+        <FeatureWithScreenshotOnSide
+          id="bug-tracking"
+          ariaLabel="Features for bug tracking"
+          title="Resolve Bugs Faster"
+          description="Reduce bug resolution times with visual bug reports that include session info, user data, and in-depth logs."
+          hashtag="Bug tracking"
+          imageAlt="Image Alt"
+          video={vd002}
+          hasSubFeatures={true}
+        >
+          <LearnMoreLink href="/features/bug-tracking" text="Discover bug tracking" />
+          <FeatureList features={bugTrackingFeatures} />
+        </FeatureWithScreenshotOnSide>
+        <FeatureWithScreenshotOnSide
+          id="feature-request-management"
+          ariaLabel="Features for feature request management"
+          title="Prioritize changes that matter"
+          description="No more guessing what your users want. Hear from them directly, then make the changes they care about."
+          hashtag="Product decision"
+          imageAlt="Image Alt"
+          imageOnLeft={true}
+          video={vd003}
+          hasSubFeatures={true}
+        >
+          <LearnMoreLink
+            href="/features/feature-request-management"
+            text="Discover product decision"
+          />
+          <FeatureList features={featureRequestManagementFeatures} />
+        </FeatureWithScreenshotOnSide>
+        <FeatureWithScreenshotOnSide
+          id="feedback-management"
+          ariaLabel="Features for feedback management"
+          title="Centralize your feedback management"
+          description="Userowl is the only tool you need to manage your feedback. Invite your team, connect your tools, and personalize according to your needs."
+          hashtag="One tool"
+          imageAlt="Image Alt"
+          isDark={true}
+          video={vd004}
+          hasSubFeatures={true}
+        >
+          <LearnMoreLink href="/features/feedback-management" text="Discover feedback management" />
+          <FeatureList features={feedbackManagementFeatures} />
+        </FeatureWithScreenshotOnSide>
+        <FeatureWithScreenshotOnSide
+          id="integrations"
+          ariaLabel="Integration features"
+          title="Fits into your team's workflow"
+          description="Userowl integrates with the tools you already use for product management, customer support, and communication."
+          hashtag="Integrations"
+          svgImage={integrationLogosAnim}
+          imageAlt="Image Alt"
+          imageOnLeft={true}
+          isDark={true}
+          equalSizeImage={true}
+          hasSubFeatures={true}
+        >
+          <LearnMoreLink href="/features/integrations" text="Discover integrations" />
+          <FeatureList features={integrationFeatures} />
+        </FeatureWithScreenshotOnSide>
+        {/* <Feature3 /> */}
+        {/* <Feature4 /> */}
+        {/* <PrimaryFeatures />
         <SecondaryFeatures /> */}
-      <CallToAction />
-      {/* <Testimonials /> */}
-      {/* <Pricing /> */}
-      <Faqs faqs={faqs} isDark={true} />
+        <CallToAction />
+        {/* <Testimonials /> */}
+        {/* <Pricing /> */}
+        <Faqs faqs={faqs} isDark={true} />
+      </Suspense>
     </>
   );
 }
