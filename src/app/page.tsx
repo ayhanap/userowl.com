@@ -213,7 +213,7 @@ export default function Home() {
         ctaHref="https://app.userowl.com/signup"
         imageAlt="Image Alt"
         video={vd000}
-        learnMoreText="Learn More"
+        learnMoreText="Learn more"
         learnMoreHref="#feedback-widget"
         isDark={false}
         sideBySide={true}
