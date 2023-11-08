@@ -11,7 +11,7 @@ import { InTextLink } from '@/components/InTextLink';
 import integrationLogosAnim from '@/images/illustrations/integrationLogosCircularAnim.svg';
 import vd000hevc from '@/videos/VD-000-30fps-hevc-safari.mp4';
 import vd000 from '@/videos/VD-000-RF38.webm';
-import vd000_poster from '@/videos/VD-000-poster.png';
+import vd000_poster from '@/videos/VD-000-poster.webp';
 
 import vd002 from '@/videos/VD-002-zoom-encoded-RF26.mp4';
 import vd003 from '@/videos/VD-003-encoded-RF22.mp4';
