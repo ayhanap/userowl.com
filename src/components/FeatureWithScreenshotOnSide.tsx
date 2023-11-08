@@ -128,9 +128,17 @@ const FeatureWithScreenshotOnSide = (props: Props) => {
   );
 };
 
-export const LearnMoreLink = ({ href, text }: { href: string; text?: string }) => {
+export const LearnMoreLink = ({
+  href,
+  text,
+  className,
+}: {
+  href: string;
+  text?: string;
+  className?: string;
+}) => {
   return (
-    <p className="mt-6">
+    <p className={clsx(className || 'mt-6')}>
       <Link
         href={href}
         className={clsx(

@@ -78,7 +78,7 @@ const FeatureMain = (props: Props) => {
             ))}
           </dl>
           <FadeIn className="mt-2 flex justify-center">
-            <LearnMoreLink href="/features/feedback-widget" />
+            <LearnMoreLink href="/features/feedback-widget" text="Discover feedback widget" />
           </FadeIn>
         </FadeInStagger>
       </div>

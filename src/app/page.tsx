@@ -274,7 +274,7 @@ export default function Home() {
         video={vd002}
         hasSubFeatures={true}
       >
-        <LearnMoreLink href="/features/bug-tracking" />
+        <LearnMoreLink href="/features/bug-tracking" text="Discover bug tracking" />
         <FeatureList features={bugTrackingFeatures} />
       </FeatureWithScreenshotOnSide>
       <FeatureWithScreenshotOnSide
@@ -288,7 +288,10 @@ export default function Home() {
         video={vd003}
         hasSubFeatures={true}
       >
-        <LearnMoreLink href="/features/feature-request-management" />
+        <LearnMoreLink
+          href="/features/feature-request-management"
+          text="Discover product decision"
+        />
         <FeatureList features={featureRequestManagementFeatures} />
       </FeatureWithScreenshotOnSide>
       <FeatureWithScreenshotOnSide
@@ -302,7 +305,7 @@ export default function Home() {
         video={vd004}
         hasSubFeatures={true}
       >
-        <LearnMoreLink href="/features/feedback-management" />
+        <LearnMoreLink href="/features/feedback-management" text="Discover feedback management" />
         <FeatureList features={feedbackManagementFeatures} />
       </FeatureWithScreenshotOnSide>
       <FeatureWithScreenshotOnSide
@@ -318,7 +321,7 @@ export default function Home() {
         equalSizeImage={true}
         hasSubFeatures={true}
       >
-        <LearnMoreLink href="/features/integrations" />
+        <LearnMoreLink href="/features/integrations" text="Discover integrations" />
         <FeatureList features={integrationFeatures} />
       </FeatureWithScreenshotOnSide>
       {/* <Feature3 /> */}

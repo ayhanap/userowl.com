@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button';
 import { FadeIn, FadeInStagger } from '@/components/FadeIn';
+import { LearnMoreLink } from '@/components/FeatureWithScreenshotOnSide';
 import clsx from 'clsx';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image, { StaticImageData } from 'next/image';
@@ -66,14 +67,11 @@ const Hero = (props: Props) => {
                   </div>
                 </div>
                 {props.learnMoreText ? (
-                  <div className="flex h-10 items-center">
-                    <a
-                      href={props.learnMoreHref}
-                      className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
-                    >
-                      {props.learnMoreText} <span aria-hidden="true">→</span>
-                    </a>
-                  </div>
+                  <LearnMoreLink
+                    text={props.learnMoreText}
+                    href={props.learnMoreHref}
+                    className="flex h-10 items-center"
+                  />
                 ) : null}
                 {/* <a
                   href={props.ctaHref}
