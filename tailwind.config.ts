@@ -171,7 +171,7 @@ export default {
       fontFamily: {
         sans: [['var(--font-inter)'], { fontFeatureSettings: '"cv02", "cv03", "cv04", "cv11"' }],
         mono: [...defaultTheme.fontFamily.mono],
-        display: 'var(--font-lexend)',
+        // display: 'var(--font-lexend)',
       },
       maxWidth: {
         '2xl': '40rem',

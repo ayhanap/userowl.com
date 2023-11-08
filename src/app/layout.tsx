@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Lexend } from 'next/font/google';
+// import { Lexend } from 'next/font/google';
 import Local from 'next/font/local';
 
 import { Providers } from '@/app/providers';
@@ -41,23 +41,27 @@ export const metadata: Metadata = {
 };
 
 const inter = Local({
-  src: './Inter-roman.var.woff2',
+  src: './Inter-subset.woff2',
   display: 'swap',
   variable: '--font-inter',
   weight: '100 900',
 });
 
-const lexend = Lexend({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-lexend',
-});
+// const lexend = Lexend({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-lexend',
+// });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}
+      className={clsx(
+        'h-full scroll-smooth bg-white antialiased',
+        inter.variable,
+        // ,lexend.variable
+      )}
       suppressHydrationWarning
     >
       <head>
