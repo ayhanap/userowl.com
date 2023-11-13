@@ -17,11 +17,9 @@ import SidebarNav from '@/components/navigation/SidebarNav';
 import NavItem from '@/components/navigation/navItem';
 import { FloatingDelayGroup } from '@floating-ui/react';
 import {
-  AcademicCapIcon,
   BookOpenIcon,
   BugAntIcon,
   CodeBracketIcon,
-  LifebuoyIcon,
   LightBulbIcon,
   MapIcon,
   NewspaperIcon,
@@ -103,18 +101,18 @@ const resources: NavItem[] = [
     href: '/blog',
     icon: BookOpenIcon,
   },
-  {
-    name: 'Help Center',
-    description: 'Find answers to your questions',
-    href: 'https://help.userowl.com',
-    icon: LifebuoyIcon,
-  },
-  {
-    name: 'Documentation',
-    description: 'Dive into detailed documentation',
-    href: 'https://docs.userowl.com',
-    icon: AcademicCapIcon,
-  },
+  // {
+  //   name: 'Help Center',
+  //   description: 'Find answers to your questions',
+  //   href: 'https://help.userowl.com',
+  //   icon: LifebuoyIcon,
+  // },
+  // {
+  //   name: 'Documentation',
+  //   description: 'Dive into detailed documentation',
+  //   href: 'https://docs.userowl.com',
+  //   icon: AcademicCapIcon,
+  // },
 ];
 
 const navigation: NavItem[] = [
@@ -132,11 +130,11 @@ const navigation: NavItem[] = [
     name: 'Pricing',
     href: '/pricing',
   },
-  // {
-  //   name: 'Resources',
-  //   href: '/resources',
-  //   children: resources,
-  // },
+  {
+    name: 'Resources',
+    href: '/resources',
+    children: resources,
+  },
 ];
 
 function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -240,7 +238,7 @@ export const Header = (props: Props) => {
                   <FlyoutMenu label="Use Cases" items={useCases} isDark={props.isDark} />
 
                   <NavLink href="/pricing">Pricing</NavLink>
-                  {/* <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} /> */}
+                  <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} />
                 </FloatingDelayGroup>
               </div>
               <SidebarNav ref={hamburgerMenuRef} items={navigation} />

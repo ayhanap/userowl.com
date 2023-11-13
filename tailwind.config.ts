@@ -1,7 +1,9 @@
 import headlessuiPlugin from '@headlessui/tailwindcss';
 import formsPlugin from '@tailwindcss/forms';
+import typographyPlugin from '@tailwindcss/typography';
 import { type Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import typographyStyles from './typography';
 
 const neutralExt = {
   900: 'lch(7.5% 26 304 / <alpha-value>)',
@@ -180,7 +182,8 @@ export default {
         xs: '475px',
         ...defaultTheme.screens,
       },
+      typography: typographyStyles,
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [formsPlugin, headlessuiPlugin, typographyPlugin],
 } satisfies Config;

@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })();`}
         </Script>
       </head>
-      <body className="">
+      <body className="bg-white dark:bg-gray-900">
         <Suspense>
           <Analytics />
         </Suspense>

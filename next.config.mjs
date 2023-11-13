@@ -1,7 +1,10 @@
+// const path = require('path');
+
+import rehypePrism from '@mapbox/rehype-prism';
+import nextMDX from '@next/mdx';
+import remarkGfm from 'remark-gfm';
+
 /** @type {import('next').NextConfig} */
-
-const path = require('path');
-
 const nextConfig = {
   webpack(config, { isServer, dev }) {
     // Configures webpack to handle SVG files with SVGR. SVGR optimizes and transforms SVG files
@@ -90,6 +93,15 @@ const nextConfig = {
       transform: '@heroicons/react/20/solid/{{member}}',
     },
   },
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 };
 
-module.exports = nextConfig;
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypePrism],
+  },
+});
+
+export default withMDX(nextConfig);
