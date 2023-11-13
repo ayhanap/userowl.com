@@ -102,7 +102,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
         // Images
         img: {
-          borderRadius: theme('borderRadius.3xl'),
+          borderRadius: theme('borderRadius.xl'),
         },
 
         // Inline elements
@@ -202,7 +202,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
           fontSize: theme('fontSize.sm')[0],
           fontWeight: theme('fontWeight.medium'),
           backgroundColor: 'var(--tw-prose-pre-bg)',
-          borderRadius: theme('borderRadius.3xl'),
+          borderRadius: theme('borderRadius.xl'),
           padding: theme('spacing.8'),
           overflowX: 'auto',
           border: '1px solid',
