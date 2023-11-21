@@ -16,7 +16,7 @@ export function FadeIn({
 }) {
   const isMobile = useCheckMobileScreen();
 
-  const viewport = { once: isMobile, margin: '0px 0px -200px' };
+  const viewport = { once: true, margin: '0px 0px -200px' };
   const shouldReduceMotion = useReducedMotion();
   const isInStaggerGroup = useContext(FadeInStaggerContext);
 
@@ -54,7 +54,7 @@ export function FadeInStagger({
   ...props
 }: React.ComponentPropsWithoutRef<typeof motion.div> & { faster?: boolean }) {
   const isMobile = useCheckMobileScreen();
-  const viewport = { once: isMobile, margin: '0px 0px -200px' };
+  const viewport = { once: true, margin: '0px 0px -200px' };
   return (
     <FadeInStaggerContext.Provider value={true}>
       <motion.div
