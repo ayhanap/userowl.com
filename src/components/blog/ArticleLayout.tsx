@@ -82,7 +82,7 @@ export default function ArticleLayout({
                 </ul>
               </div>
             </header>
-            <Prose className="mt-8" data-mdx-content>
+            <Prose className="mt-8 max-w-none" data-mdx-content>
               {children}
             </Prose>
           </article>

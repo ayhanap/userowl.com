@@ -3,7 +3,7 @@ import ArticleLayout from '@/components/blog/ArticleLayout';
 export const article = {
   author: 'Ayhan APAYDIN',
   date: '2022-07-14',
-  title: 'Rewriting the cosmOS kernel in Rust',
+  title: 'How to write a good bug report?',
   description:
     'When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.',
 };
@@ -15,25 +15,42 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />;
 
-When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.
+Identifying bugs could be hard, demanding thorough testing and appropriate test scenarios. Reproducing a bug can be even more challenging. Writing a good bug report is crucial for effective communication between developers, testers, and other team members. A well-documented bug report helps the development team understand the issue quickly and facilitates a smoother resolution process.
 
-```rust
-use ferris_says::say;
-use std::io::{stdout, BufWriter};
+Following a structure on your bug reports helps everyone on your team understand the issue quickly. Writing an effective and to-the-point bug report requires including some crucial information.
 
-fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow hackers");
-    let width = message.chars().count();
+# Top information to include in your bug reports
 
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
-}
-```
+1. Title/Summary
+2. Steps to reproduce
+3. Environment details
+4. Expected versus actual behavior
+5. Screenshots
+6. Severity/Priority
+7. Other technical details
 
-I derive a large amount of my self-worth from whether or not Hacker News is impressed with the work I'm doing, so when I realized this, I cancelled all of our existing projects and started migrating everything to Rust immediately.
+## 1. Title/Summary
 
-## Sermone fata
+The title should provide a brief, yet descriptive, summary of the bug. Include keywords related to the issue for easier search and identification. Here are some examples:
+
+> Cannot complete signup on IOS devices.
+
+> Total earnings in the summary page are calculated wrong.
+
+## 2. Steps to reproduce
+
+Provide a comprehensive set of instructions that guides developers in replicating the issue. Break down the process into simple, sequential steps, ensuring that each action is distinct and easy to follow.
+
+If applicable, include specific input data or conditions that are essential to reproducing the bug. These can be a user that you used or values you input that might affect the outcome of the reproduction.
+
+> 1. Log in with a "project admin" user.
+> 2. Go to Dashboard > Total Earnings
+> 3. Filter the date from March to May and press "Generate Report"
+> 4. Check the "Total Earning" column sum at the bottom right.
+
+## 3. Environment details
+
+Specify the operating system, browser, device, or any other relevant platform information. Also, provide the version number of the software or application where the bug occurred, this might include the environment name like test, uat-1, prod etc.
 
 Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior
 in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite

@@ -130,11 +130,11 @@ const navigation: NavItem[] = [
     name: 'Pricing',
     href: '/pricing',
   },
-  {
-    name: 'Resources',
-    href: '/resources',
-    children: resources,
-  },
+  // {
+  //   name: 'Resources',
+  //   href: '/resources',
+  //   children: resources,
+  // },
 ];
 
 function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -238,7 +238,7 @@ export const Header = (props: Props) => {
                   <FlyoutMenu label="Use Cases" items={useCases} isDark={props.isDark} />
 
                   <NavLink href="/pricing">Pricing</NavLink>
-                  <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} />
+                  {/* <FlyoutMenu label="Resources" items={resources} isDark={props.isDark} /> */}
                 </FloatingDelayGroup>
               </div>
               <SidebarNav ref={hamburgerMenuRef} items={navigation} />
