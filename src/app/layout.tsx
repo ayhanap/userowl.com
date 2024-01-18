@@ -14,7 +14,7 @@ import { Suspense } from 'react';
 export const metadata: Metadata = {
   metadataBase: new URL('https://userowl.com'),
   title: {
-    template: '%s | Userowl',
+    template: '%s',
     default: 'Userowl - Visual Feedback Management Software',
   },
   description:
