@@ -415,7 +415,7 @@ export function Pricing() {
               frequency={frequency}
               description="Best for enterprises that need special support and custom tools."
               everythingInOtherDescription="Everything in Team, plus..."
-              buttonText={'Start 14-day free trial'}
+              buttonText={'Schedule a call'}
               href="https://calendly.com/userowl/30min"
               nOfUsers="Unlimited"
               nOfProjects="Unlimited"
