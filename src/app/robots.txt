@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: /blog
+Disallow: /em
 
 Sitemap: https://userowl.com/sitemap.xml
