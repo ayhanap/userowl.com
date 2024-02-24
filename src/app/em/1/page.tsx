@@ -2,7 +2,7 @@ import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
 export default async function EmployeeAyhanApaydin() {
-  return redirect('https://linktr.ee/ayhanap');
+  redirect('https://linktr.ee/ayhanap');
 }
 
 export const metadata: Metadata = {
